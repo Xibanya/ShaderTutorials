@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ClaireMaskedEmission
+  m_Shader: {fileID: 4800000, guid: 6f79f0433535039409faa85740872357, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: cbf8c0c8fce66d741b03a7f0a536a3ad, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap2:
+        m_Texture: {fileID: 2800000, guid: 6db6cad941ff63d44ad9633e450259cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmTex:
+        m_Texture: {fileID: 2800000, guid: 84d634b3c021090478d4218e2192e150, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 2800000, guid: fcea6f78885d3dc438b7e6491829b8a3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 84d634b3c021090478d4218e2192e150, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OtherTex:
+        m_Texture: {fileID: 2800000, guid: f12f523c2db879141af7be327fc7ce3a, type: 3}
+        m_Scale: {x: 5, y: 5}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowTex:
+        m_Texture: {fileID: 2800000, guid: 4a9ac17223dd1a243b4297f7b873b059, type: 3}
+        m_Scale: {x: 50, y: 50}
+        m_Offset: {x: 0, y: 0}
+    - _SpecMap:
+        m_Texture: {fileID: 2800000, guid: 5ec90beeaf552dd48a2fdd3347b2b822, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _CamDistMod: 0.5
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _FRES: 0
+    - _GlossIntensity: 2
+    - _GlossMapScale: 1
+    - _GlossSize: 0.5
+    - _GlossSoftness: 0.18
+    - _Glossiness: 1
+    - _GlossyReflections: 1
+    - _GradSmooth: 0.79
+    - _MaxHeight: 0
+    - _Metallic: 1
+    - _Mix: 0.542
+    - _Mode: 0
+    - _NormalStrength: 1
+    - _Occlusion: 2
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _RMA: 0
+    - _RimPower: 0.785
+    - _RimSide: -1.19
+    - _RimSoftness: 0.256
+    - _ShadowSoftness: 0.016
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Threshold: 1.56
+    - _UVSec: 0
+    - _YPos: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _AddColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor1: {r: 0, g: 0.9241464, b: 1, a: 1}
+    - _EmissionColor2: {r: 0.38875252, g: 0.7264151, b: 0, a: 1}
+    - _EmissionColor3: {r: 0.23218822, g: 0, b: 1, a: 1}
+    - _GlossColor: {r: 0.5556639, g: 0.3725525, b: 0.8679245, a: 1}
+    - _LowColor: {r: 0.45454738, g: 0.23113209, b: 1, a: 1}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShadowColor: {r: 0.16576555, g: 0.17680165, b: 0.53676474, a: 1}
