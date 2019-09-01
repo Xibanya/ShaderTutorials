@@ -23,7 +23,6 @@
 		[Space]
 		[Header(Outline)]
 		_Outline("Outline Width", Range(0.0, 0.025)) = .003
-		_AddtlOutline("Additional Outline Width", Range(0, 1)) = 0
 	}
 		SubShader
 		{
@@ -32,15 +31,15 @@
 
 			Cull Front
 			CGPROGRAM
-			#include "XibCommon.cginc"
-			#pragma surface surf Toon vertex:OutlineVert
+			#include "../Lib/XibanyaToon.cginc"
+			#pragma surface surf Toon vertex:OutlineVert noshadow noforwardadd
 			#pragma target 3.0
 
-			float _Outline;
-		half _AddtlOutline;
+			float	_Outline;
+			half	_AddtlOutline;
 			void OutlineVert(inout appdata_full v)
 			{
-				v.vertex.xyz += v.normal * (_Outline + _AddtlOutline);
+				v.vertex.xyz += v.normal * _Outline;
 			}
 			struct Input
 			{
@@ -54,20 +53,20 @@
 			
 			Cull Back
 			CGPROGRAM
-			#include "XibCommon.cginc"
+			#include "../Lib/XibanyaToon.cginc"
 			#pragma surface surf Toon
 
-			half _Thresh;
-			half _ShadowSmooth;
-			half3 _ShadowColor;
-			half _Gloss;
-			half3 _GlossColor;
-			half _GlossSmoothness;
+			half		_Thresh;
+			half		_ShadowSmooth;
+			half3		_ShadowColor;
+			half		_Gloss;
+			half3		_GlossColor;
+			half		_GlossSmoothness;
 
-			sampler2D _MainTex;
-			sampler2D _BumpMap;
-			sampler2D _EmissionMap;
-			sampler2D _SpecMap;
+			sampler2D	_MainTex;
+			sampler2D	_BumpMap;
+			sampler2D	_EmissionMap;
+			sampler2D	_SpecMap;
 
 			struct Input
 			{
@@ -75,12 +74,12 @@
 				float3 viewDir;
 			};
 
-			fixed4 _Color;
-			float _NormalStrength;
-			half4 _EmissionColor;
-			half4 _RimColor;
-			half _RimPower;
-			half _RimSmooth;
+			half4		_Color;
+			float		_NormalStrength;
+			half4		_EmissionColor;
+			half4		_RimColor;
+			half		_RimPower;
+			half		 _RimSmooth;
 
 			void surf(Input IN, inout SurfaceOutput o)
 			{
