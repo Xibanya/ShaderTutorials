@@ -36,7 +36,7 @@ half4 LightingToon(SurfaceOutput s, half3 lightDir, half3 viewDir, half atten)
 	half3 halfDir = normalize(lightDir + viewDir);
 	half halfDot = pow(dot(s.Normal, halfDir), _ToonGloss);
 	half gloss = smoothstep(0.5, max(0.5, _ToonGlossSmoothness), halfDot) * s.Specular;
-	c.rgb = lerp(c.rgb, _ToonGlossColor * _LightColor0.rgb, gloss);
+	c.rgb = lerp(c.rgb, max(c.rgb, _ToonGlossColor * _LightColor0.rgb), gloss);
 	return c;
 }
 #endif
