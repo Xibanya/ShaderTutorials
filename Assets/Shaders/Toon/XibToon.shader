@@ -1,4 +1,4 @@
-﻿Shader "Xibanya/XibToon Cutout"
+﻿Shader "Xibanya/XibToon"
 {
 	Properties
 	{
@@ -20,20 +20,15 @@
 		_Gloss("Glossiness", Range(0,20)) = 0
 		_GlossSmoothness("Gloss Smoothness", Range(0,2)) = 0
 		[HDR]_GlossColor("Gloss Color", Color) = (1,1,1,1)
-		[Space]
-		[Header(Options)]
-		_Cutout("Cutout", Range(0,1)) = 0.5
-		[Enum(Off,0,Front,1,Back,2)] _Cull("Cull", Int) = 0
 	}
-
 		SubShader
 		{
-			Tags { "RenderType" = "TransparentCutout" "Queue" = "Transparent" }
+			Tags { "RenderType" = "Opaque" }
 			LOD 200
-			Cull[_Cull]
+
 			CGPROGRAM
-			#pragma surface surf Toon addshadow
 			#include "../Lib/XibanyaToon.cginc"
+			#pragma surface surf Toon
 
 			half		_Thresh;
 			half		_ShadowSmooth;
@@ -59,16 +54,12 @@
 			half4		_RimColor;
 			half		_RimPower;
 			half		_RimSmooth;
-			half		_Cutout;
 
 			void surf(Input IN, inout SurfaceOutput o)
 			{
 				InitLightingToon(_Thresh, _ShadowSmooth, _ShadowColor,
 					_Gloss, _GlossSmoothness, _GlossColor);
-				half4 tex = tex2D(_MainTex, IN.uv_MainTex);
-				o.Albedo = tex.rgb * _Color;
-				o.Alpha = tex.a;
-				clip(tex.a - _Cutout);
+				o.Albedo = tex2D(_MainTex, IN.uv_MainTex).rgb * _Color;
 				o.Normal = UnpackNormal(tex2D(_BumpMap, IN.uv_MainTex));
 				o.Normal.z *= _NormalStrength;
 				o.Emission = _EmissionColor * tex2D(_EmissionMap, IN.uv_MainTex) * o.Albedo;
@@ -78,5 +69,5 @@
 			}
 			ENDCG
 		}
-			Fallback "Legacy Shaders/Transparent/Cutout/VertexLit"
+			FallBack "Diffuse"
 }
