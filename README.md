@@ -20,3 +20,4 @@ Collection of shaders used in tutorial series Shaders For People Who Don't Know 
 * [Part 13: Highlights](https://www.patreon.com/posts/shaders-for-who-28571898)
 * [Part 14: Outlines](https://www.patreon.com/posts/shaders-for-who-28866934)
 * [Part 15: Sprites](https://www.patreon.com/posts/shaders-for-who-29239797)
+* [Part 16: Tangent View Direction](https://www.patreon.com/posts/part-16-blending-29626142)
