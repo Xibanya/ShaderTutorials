@@ -1,16 +1,16 @@
-Shader "Xibanya/XibStandard"
+Shader "Xibanya/Standard/XibStandard"
 {
     Properties
     {
         _Color ("Color", Color) = (1,1,1,1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
-		_BumpMap("Normal", 2D) = "bump" {}
-		_NormalStrength("Normal Strength", Float) = 1
-		[HDR]_EmissionColor("Emission Color", Color) = (0,0,0,1)
-		_EmissionMap("Emission Tex", 2D) = "white" {}
-		[HDR]_RimColor("Rim Color", Color) = (1,1,1,1)
-		_RimPower("Rim Fill", Range(0, 2)) = 0.1
-		_RimSmooth("Rim Smoothness", Range(0.5, 1)) = 1
+	_BumpMap("Normal", 2D) = "bump" {}
+	_NormalStrength("Normal Strength", Float) = 1
+	[HDR]_EmissionColor("Emission Color", Color) = (0,0,0,1)
+	_EmissionMap("Emission Tex", 2D) = "white" {}
+	[HDR]_RimColor("Rim Color", Color) = (1,1,1,1)
+	_RimPower("Rim Fill", Range(0, 2)) = 0.1
+	_RimSmooth("Rim Smoothness", Range(0.5, 1)) = 1
     }
     SubShader
     {
@@ -18,7 +18,7 @@ Shader "Xibanya/XibStandard"
         LOD 200
 
         CGPROGRAM
-        #pragma surface surf Standard fullforwardshadows
+        #pragma surface surf Standard addshadow
         #pragma target 3.0
 
         sampler2D _MainTex;
@@ -31,7 +31,7 @@ Shader "Xibanya/XibStandard"
 			float3 viewDir;
         };
 
-        fixed4 _Color;
+        half4 _Color;
 		float _NormalStrength;
 		half4 _EmissionColor;
 		half4 _RimColor;
