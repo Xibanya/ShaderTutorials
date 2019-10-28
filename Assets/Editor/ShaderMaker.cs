@@ -1,4 +1,19 @@
-﻿using UnityEngine;
+//By Xibanya
+//https://twitter.com/ManuelaXibanya
+//https://www.patreon.com/teamdogpit
+//Shared under a CreativeCommonsAttribution 4.0 International License
+/*
+HOW TO INSTALL:
+In any folder in your project called Editor (or any folder which has 
+"Editor" somewhere in its directory path within your assets folder) create 
+a new C# script called ShaderMaker and paste this code inside OR download 
+this file directly into a location in your project files which has "Editor"
+somewhere in its path.
+
+HOW TO USE:
+Go to Tools > Xibanya > ShaderMaker to open the window
+*/
+using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 using System.IO;
