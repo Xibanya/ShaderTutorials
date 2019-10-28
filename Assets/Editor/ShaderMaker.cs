@@ -113,7 +113,7 @@ public class ShaderMaker : EditorWindow
         if (GUILayout.Button("Generate")) GenerateShader();
         if (shader != null)
         {
-            DoTooltip("Create another material with most recently generated shader assigned to it.");
+            DoTooltip("Create another material with most recently generated shader assigned to it.", backgroundColor);
             if (GUILayout.Button("Generate additional material")) GenerateMaterial(shader, shaderPath);
         }
         EditorGUILayout.EndVertical();
