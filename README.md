@@ -21,3 +21,5 @@ Collection of shaders used in tutorial series Shaders For People Who Don't Know 
 * [Part 14: Outlines](https://www.patreon.com/posts/shaders-for-who-28866934)
 * [Part 15: Sprites](https://www.patreon.com/posts/shaders-for-who-29239797)
 * [Part 16: Tangent View Direction](https://www.patreon.com/posts/part-16-blending-29626142)
+* [Part 17: Scrolling Patterns](https://www.patreon.com/posts/30578089)
+* [Part 18: Packed textures and Keywords](https://www.patreon.com/posts/part-18-packed-30816226)
