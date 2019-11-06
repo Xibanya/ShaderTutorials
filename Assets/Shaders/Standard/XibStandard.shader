@@ -91,6 +91,8 @@ Shader "Xibanya/Standard/XibStandard"
 			o.Metallic = shiny.r * _Metallic;
 #elif defined(_METAL_FIRSTG)
 			o.Metallic = shiny.g * _Metallic;
+#else
+			o.Metallic = _Metallic;
 #endif
 
 			half occlusion = 1;
