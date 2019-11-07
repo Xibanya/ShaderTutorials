@@ -12,3 +12,10 @@ collections:
     output: true
     sort_by: part
     permalink: /:collection/:name
+    
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "post"
