@@ -1,4 +1,9 @@
 theme: jekyll-theme-midnight
+collections:
+  tutorials:
+    output: true
+    permalink: /:collection/:name
+    
 defaults:
   -
     scope:
