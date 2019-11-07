@@ -1,3 +1,3 @@
-Have any questions, comments, or corrections? Let me know on [Twitter](https://twitter.com/ManuelaXibanya), or in [Discord](https://discord.gg/79mD4R7). And if I helped you out, please consider [becoming a patron!](https://www.patreon.com/teamdogpit)
+Have any questions, comments, or corrections? Let me know on [Twitter](https://twitter.com/{{site.twitter}}), or in [Discord]([Discord](https://discord.gg/{{site.discord}})). And if I helped you out, please consider [becoming a patron!](https://www.patreon.com/{{site.patreon}})
 
 _This tutorial is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/). The code shared with this tutorial is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)._
