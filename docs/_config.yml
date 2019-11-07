@@ -1,1 +1,13 @@
 theme: jekyll-theme-midnight
+collections:
+  tutorials:
+    output: true
+    sort_by: part
+    permalink: /:collection/:name
+    
+defaults:
+  -
+    scope:
+      path: "tutorial" # an empty string here means all files in the project
+    values:
+      layout: "post"
