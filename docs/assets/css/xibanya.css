@@ -1,3 +1,10 @@
+:root {
+  --link-color: #062c33;
+}
+
+.navitem {
+}
+
 .alert {
   position: relative;
   padding: 0.75rem 1.25rem;
@@ -11,14 +18,27 @@
 .alert-link {
   font-weight: 700;
 }
-.alert-info {
+.alert-tutorial {
+  font-size: 13px;
   color: #0c5460;
   background-color: #d1ecf1;
   border-color: #bee5eb;
+  margin-bottom: -1px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom: 1px solid #e1e4e8;
+  border-box;
+  background-color: rgb(246, 248, 250);
+  border-bottom-color: rgb(209, 213, 218);
+  display: block;
 }
-.alert-info hr {
+.alert-tutorial hr {
   border-top-color: #abdde5;
 }
-.alert-info .alert-link {
-  color: #062c33;
+.alert-tutorial .alert-link {
+  color: var(--link-color);
+}
+.alert-tutorial a {
+  color: var(--link-color);
+  font-weight: 700;
 }
