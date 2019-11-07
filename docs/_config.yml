@@ -5,6 +5,7 @@ github_username: Xibanya
 twitter_username: ManuelaXibanya
 url: "http://Xibanya.github.io"
 baseurl: "/ShaderTutorials"
+show_downloads: false
 
 collections:
   tutorials:
