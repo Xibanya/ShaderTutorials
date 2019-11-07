@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Dissolve
+date: 2019-07-11 17:13:00
 categories: [tutorial]
 tags: [dissolve, clip, step, tex2d]
 ---
@@ -9,7 +10,7 @@ tags: [dissolve, clip, step, tex2d]
 
 [Last time](https://www.patreon.com/posts/part-11-cutouts-28304378) we learned how to make a cutout shader. Today we're going to apply what we learned to make a neat dissolve effect!
 
-[[https://github.com/Xibanya/ShaderTutorials/blob/master/Img/12 Dissolve/00.png]]
+![](https://github.com/Xibanya/ShaderTutorials/blob/master/Img/12 Dissolve/00.png)
 
 ## Lesson in brief
 ### Code created
