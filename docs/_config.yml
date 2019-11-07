@@ -2,6 +2,7 @@ title: Shader Tutorials
 theme: jekyll-theme-midnight
 markdown: kramdown
 github_username: Xibanya
+twitter_username: ManuelaXibanya
 url: "http://Xibanya.github.io"
 baseurl: "/ShaderTutorials"
 
@@ -10,10 +11,3 @@ collections:
     output: true
     sort_by: part
     permalink: /:collection/:name
-    
-defaults:
-  -
-    scope:
-      path: "tutorial" # an empty string here means all files in the project
-    values:
-      layout: "post"
