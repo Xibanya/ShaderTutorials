@@ -1,4 +1,10 @@
+title: Shader Tutorials
 theme: jekyll-theme-midnight
+markdown: kramdown
+github_username: Xibanya
+url: "http://Xibanya.github.io"
+baseurl: "/ShaderTutorials"
+
 collections:
   tutorials:
     output: true
