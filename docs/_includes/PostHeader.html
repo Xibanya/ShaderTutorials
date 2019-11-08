@@ -6,7 +6,7 @@
 {% endif %}
 <span class="navitem"><a href="{{site.url}}{{site.baseurl}}">{{site.title}}</a></span>
 {% if page.next %}
-{% assign next = site.data.directory[page.next] %}
-<span class="navitem"> • <a href="{{site.url}}{{site.baseurl}}{{next.url}}">Part {{next.part}}, {{next.title}} ▶</a></span>
+{% assign go = site.data.directory[page.next] %}
+<span class="navitem"> • <a href="{{site.url}}{{site.baseurl}}{{go.url}}">Part {{page.next}}, {{go.title}} ▶</a></span>
 {% endif %}
 </div>
