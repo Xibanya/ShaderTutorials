@@ -11,7 +11,6 @@
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <!--[if lt IE 8]><link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
   </head>
   <body>
       <div id="header">
@@ -19,21 +18,13 @@
       </div>
 
     <div class="wrapper">
-
       <section>
         <div id="title">
           <h1>{{ page.title | default: site.github.repository_name }}</h1>
-          {% include TagList.html %}
           <hr>
         </div>
-
-        {{ content }}
-
-         {% include footer.html %}
       </section>
-
     </div>
-
    {% include GA.html %}
   </body>
 </html>
