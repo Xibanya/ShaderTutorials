@@ -1,8 +1,20 @@
 :root {
   --link-color: #062c33;
   --box-bg: #d1ecf1;
+  --hot-pink: rgb(253, 18, 121);
 }
 .navitem {
+  background-color: transparent;
+}
+.navitem a {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+  font-weight: 700;
+}
+.navitem a:hover, a:focus, a:active {
+  font-weight: bold;
+  color: var(--hot-pink);
 }
 .box-shadow {
     box-shadow: 0 1px 1px rgba(27,31,35,.1)!important;
@@ -37,6 +49,8 @@
   color: var(--link-color);
   font-weight: 700;
 }
-a:hover {
+.alert-tutorial a:hover {
+  font-weight: bold;
   text-decoration: underline;
+  color: var(--hot-pink);
 }
