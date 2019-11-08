@@ -1,12 +1,12 @@
 
 <div class="tutorial-nav">
 {% if page.last %}
-{% assign last = site.data.tutorials[page.last] %}
-<span class="navitem"> ◀ <a href="{{last.patreon}}">{{last.title}}</a> • </span>
+{% assign last = site.data.directory[page.last] %}
+<span class="navitem"><a href="{{last.patreon}}">◀ Part {{page.last}}: {{last.title}}</a> • </span>
 {% endif %}
 <span class="navitem"><a href="{{site.url}}{{site.baseurl}}">{{site.title}}</a></span>
 {% if page.next %}
-{% assign next = site.data.tutorials[page.next] %}
-<span class="navitem"> • <a href="{{next.patreon}}">{{next.title}}</a> ▶ </span>
+{% assign next = site.data.directory[page.next] %}
+<span class="navitem"> • <a href="{{next.patreon}}">Part {{page.next}}: {{next.title}} ▶</a></span>
 {% endif %}
 </div>
