@@ -31,6 +31,11 @@
   background-color: rgb(246, 248, 250);
   border-bottom-color: rgb(209, 213, 218);
   display: block;
+  box-shadow: 0 1px 1px rgba(27,31,35,.1)!important;
+  background-color: #f6f8fa!important;
+  line-height: 1.25;
+  box-sizing: border-box;
+  padding: 8px 16px;
 }
 .alert-tutorial hr {
   border-top-color: #abdde5;
