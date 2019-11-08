@@ -1,5 +1,4 @@
 title: Shader Tutorials
-theme: jekyll-theme-midnight
 markdown: kramdown
 url: "http://Xibanya.github.io"
 baseurl: "/ShaderTutorials"
@@ -12,13 +11,6 @@ discord: 79mD4R7
 patreon: teamdogpit
 
 permalink: /:categories/:title:output_ext
-paginate: 5
-
-collections:
-  tutorials:
-    output: true
-    sort_by: part
-    permalink: /:collection/:name
     
 defaults:
   -
