@@ -2,11 +2,11 @@
 <div class="tutorial-nav">
 {% if page.last %}
 {% assign last = site.data.directory[page.last] %}
-<span class="navitem"><a href="{{last.patreon}}">◀ Part {{page.last}}: {{last.title}}</a> • </span>
+<span class="navitem"><a href="{{site.url}}{{site.baseurl}}{{last.url}}">◀ Part {{page.last}}, {{last.title}}</a> • </span>
 {% endif %}
 <span class="navitem"><a href="{{site.url}}{{site.baseurl}}">{{site.title}}</a></span>
 {% if page.next %}
 {% assign next = site.data.directory[page.next] %}
-<span class="navitem"> • <a href="{{next.patreon}}">Part {{page.next}}: {{next.title}} ▶</a></span>
+<span class="navitem"> • <a href="{{site.url}}{{site.baseurl}}{{next.url}}">Part {{next.part}}, {{next.title}} ▶</a></span>
 {% endif %}
 </div>
