@@ -103,5 +103,3 @@ This is at 1
 ![](https://c10.patreonusercontent.com/3/eyJwIjoxfQ%3D%3D/patreon-media/p/post/28304378/74f74314b8b445a7abf8c946f62e0199/1.png){:width="300px"}
 
 Cutouts are a really handy trick for a lot of things. They get used a lot for making plants 'cause then you don't have to model a whole branch with leaves, you just stick a cutout shader on a plane! In fact they're pretty much perfect for things that have complicated shapes but are mostly flat. If you're feeling creative, try making some transparent textures on your own and putting them into cutout materials on planes.
-
-{% include TutorialFooter.md %}

@@ -48,7 +48,21 @@ h3 {
   font-weight: normal;
   color: #b6b6b6;
 }
+a {
+  color:#062c33;
+  font-weight:400;
+  text-decoration:none;
 
+  &:hover {
+    color: rgb(253, 18, 121);
+  }
+}
+a small {
+  font-size:11px;
+  color:rgb(33, 171, 217);
+  margin-top:-0.6em;
+  display:block;
+}
 ul{
   list-style-image:url('../images/bullet.png');
 }
@@ -206,7 +220,6 @@ dt {
     }
   }
 }
-
 section {
   max-width:650px;
   padding: 30px 0px 50px 0px;
