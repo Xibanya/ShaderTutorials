@@ -2,10 +2,11 @@
   --link-color: #062c33;
   --box-bg: #d1ecf1;
 }
-
 .navitem {
 }
-
+.box-shadow {
+    box-shadow: 0 1px 1px rgba(27,31,35,.1)!important;
+}
 .alert {
   position: relative;
   padding: 0.75rem 1.25rem;
@@ -36,6 +37,6 @@
   color: var(--link-color);
   font-weight: 700;
 }
-.box-shadow {
-    box-shadow: 0 1px 1px rgba(27,31,35,.1)!important;
+a:hover {
+  text-decoration: underline;
 }
