@@ -5,8 +5,8 @@ date: 2019-07-11 17:13:12
 categories: [tutorial]
 tags: [dissolve, clip, step, tex2d]
 part: 12
-last:11
-next:
+last: 11
+summary: Use the clip function to create a dissolve effect.
 ---
 
 # Part 12: Dissolve

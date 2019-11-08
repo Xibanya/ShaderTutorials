@@ -4,8 +4,10 @@ title: Cutouts
 date: 2019-07-11 13:45:11
 categories: [tutorial]
 tags: [clip]
-last:
-next:2019-11-07-Part12Dissolve
+part: 11
+next: 12
+summary: Use the clip function to make transparent cutouts.
+
 ---
 
 # Path 11: Cutouts
