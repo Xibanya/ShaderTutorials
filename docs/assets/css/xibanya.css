@@ -1,5 +1,6 @@
 :root {
   --link-color: #062c33;
+  --box-bg: #d1ecf1;
 }
 
 .navitem {
@@ -12,38 +13,29 @@
   border: 1px solid transparent;
   border-radius: 0.25rem;
 }
-.alert-heading {
-  color: inherit;
-}
-.alert-link {
-  font-weight: 700;
-}
 .alert-tutorial {
+  line-height: 1.25;
   font-size: 13px;
   color: #0c5460;
-  background-color: #d1ecf1;
+  background-color: var(--box-bg);
   border-color: #bee5eb;
   margin-bottom: -1px;
-  border-bottom-right-radius: 2px;
-  border-bottom-left-radius: 2px;
+  border-radius: 3px;
   border-bottom: 1px solid #e1e4e8;
-  border-box;
-  background-color: rgb(246, 248, 250);
+  border: 1px solid #d1d5da;
   border-bottom-color: rgb(209, 213, 218);
+  border-box;
   display: block;
-  box-shadow: 0 1px 1px rgba(27,31,35,.1)!important;
-  background-color: #f6f8fa!important;
-  line-height: 1.25;
   box-sizing: border-box;
   padding: 8px 16px;
 }
 .alert-tutorial hr {
   border-top-color: #abdde5;
 }
-.alert-tutorial .alert-link {
-  color: var(--link-color);
-}
 .alert-tutorial a {
   color: var(--link-color);
   font-weight: 700;
+}
+.box-shadow {
+    box-shadow: 0 1px 1px rgba(27,31,35,.1)!important;
 }
