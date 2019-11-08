@@ -4,6 +4,9 @@ title: Dissolve
 date: 2019-07-11 17:13:00
 categories: [tutorial]
 tags: [dissolve, clip, step, tex2d]
+part: 12
+last:
+next:
 ---
 
 # Part 12: Dissolve
