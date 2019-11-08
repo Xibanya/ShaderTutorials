@@ -23,7 +23,7 @@
       <section>
         <div id="title">
           <h1>{{ page.title | default: site.github.repository_name }}</h1>
-          <p>{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+          {% include TagList.html %}
           <hr>
         </div>
 
