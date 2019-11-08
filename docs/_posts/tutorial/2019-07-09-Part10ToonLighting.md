@@ -1,3 +1,13 @@
+---
+layout: post
+title: Toon Lighting
+date: 2019-07-09 14:38:10
+categories: [tutorial]
+tags: [lighting]
+part: 10
+after: 11
+summary: Use a custom lighting function to apply cel shading.
+---
 # Part 10: Toon Lighting, Shaders For People Who Don't Know How To Shader
 
 [Last time](https://www.patreon.com/posts/shaders-for-who-28231962) we learned how to use a dot product to add a fresnel rim to our shader. Now we're going to learn how to use a dot product to do cel shading! If you don't remember what a dot product is, reread [Part 8](https://www.patreon.com/posts/shaders-for-who-28227883) so you're all set for this lesson!
