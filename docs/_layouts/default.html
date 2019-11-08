@@ -22,8 +22,10 @@
         <div id="title">
           <h1>{{ page.title | default: site.github.repository_name }}</h1>
           <hr>
-          {{ content }}
+        {% include TagList.html %}
         </div>
+{{ content }}
+{% include footer.html %}
       </section>
     </div>
    {% include GA.html %}
