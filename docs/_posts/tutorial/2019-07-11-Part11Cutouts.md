@@ -5,9 +5,9 @@ date: 2019-07-11 13:45:11
 categories: [tutorial]
 tags: [clip]
 part: 11
+last: 10
 after: 12
 summary: Use the clip function to make transparent cutouts.
-
 ---
 
 # Path 11: Cutouts
