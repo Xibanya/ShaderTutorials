@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Dissolve
-date: 2019-07-11 17:13:00
+date: 2019-07-11 17:13:12
 categories: [tutorial]
 tags: [dissolve, clip, step, tex2d]
 part: 12
-last:
+last:11
 next:
 ---
 
