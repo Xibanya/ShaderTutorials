@@ -49,23 +49,6 @@ h3 {
   color: #b6b6b6;
 }
 
-a {
-  color:#ffcc00;
-  font-weight:400;
-  text-decoration:none;
-
-  &:hover {
-    color: #ffeb9b;
-  }
-}
-
-a small {
-  font-size:11px;
-  color:#666;
-  margin-top:-0.6em;
-  display:block;
-}
-
 ul{
   list-style-image:url('../images/bullet.png');
 }
