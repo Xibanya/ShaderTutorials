@@ -4,12 +4,15 @@ title: Cutouts
 date: 2019-07-11 13:45:11
 categories: [tutorial]
 tags: [clip]
-last:10
+last:
 next:12
 ---
+
+# Path 11: Cutouts
+
 Last time [we learned how to do toon shading](https://www.patreon.com/posts/part-10-toon-for-28235014)!
 
-![](https://c10.patreonusercontent.com/3/eyJwIjoxfQ%3D%3D/patreon-media/p/post/28304378/62d44117eb1e46c9810145fe9387b48e/1.png){:width="300px"}
+![](https://c10.patreonusercontent.com/3/eyJwIjoxfQ%3D%3D/patreon-media/p/post/28304378/62d44117eb1e46c9810145fe9387b48e/1.png){:width="250px"}
 
 Claire in her full toony glory -- btw this is a variant of the toon shader we did last time that has the rim strongest on one side. I challenge you to figure that out for yourself. Or, if you're a $5 patron, [you can just download it straight up here](https://www.patreon.com/posts/toon-side-rim-28290325).
 
