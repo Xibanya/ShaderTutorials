@@ -22,6 +22,10 @@ a small {
 .navitem {
   background-color: transparent;
 }
+.tutorial-nav {
+  margin: auto;
+  text-align: center;
+}
 .navitem a {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
