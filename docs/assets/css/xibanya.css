@@ -2,6 +2,22 @@
   --link-color: #062c33;
   --box-bg: #d1ecf1;
   --hot-pink: rgb(253, 18, 121);
+  --sm-link-color: rgb(33, 171, 217);
+}
+a {
+  color:var(--link-color);
+  font-weight:400;
+  text-decoration:none;
+
+  &:hover {
+    color: var(--hot-pink);
+  }
+}
+a small {
+  font-size:11px;
+  color:var(--sm-link-color);
+  margin-top:-0.6em;
+  display:block;
 }
 .navitem {
   background-color: transparent;
