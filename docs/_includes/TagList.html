@@ -1,4 +1,4 @@
-<p>{% for tag in page.tags %} 
+{% if page.tags %}<p>{% for tag in page.tags %} 
 {% if forloop.first == true %} {{tag}} {% else %} | {{tag}} {% endif %}
-{% endfor %}</p>
+{% endfor %}</p>{% endif % }
 {% if page.meta %}<p> • {{ page.meta }}</p>{% endif %}
