@@ -151,5 +151,3 @@ Pretty darn cool if you ask me.
 The final code for this shader can be found here: [XibDissolve.shader](https://github.com/Xibanya/ShaderTutorials/blob/master/Assets/Shaders/Toon/XibDissolve.shader)
 
 Next, [Part 13: Highlights](https://www.patreon.com/posts/28571898) 
-
-{% include TutorialFooter.md %}
