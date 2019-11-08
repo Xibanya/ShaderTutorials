@@ -7,19 +7,20 @@ tags: [clip]
 part: 11
 next: 12
 summary: Use the clip function to make transparent cutouts.
+
 ---
 
 # Path 11: Cutouts
 
 Last time [we learned how to do toon shading](https://www.patreon.com/posts/part-10-toon-for-28235014)!
 
-![](https://c10.patreonusercontent.com/3/eyJwIjoxfQ%3D%3D/patreon-media/p/post/28304378/62d44117eb1e46c9810145fe9387b48e/1.png){:width="250px"}
+![](https://github.com/Xibanya/ShaderTutorials/blob/master/Img/11%20Cutout/01.png){:width="250px"}
 
 Claire in her full toony glory -- btw this is a variant of the toon shader we did last time that has the rim strongest on one side. I challenge you to figure that out for yourself. Or, if you're a $5 patron, [you can just download it straight up here](https://www.patreon.com/posts/toon-side-rim-28290325).
 
 And yet, something is amiss -- her eyes and mouth are just kinda _dull_. That's because they're still using the standard shader! Let's put them on the toon shader too! Make a new material called ClaireFeatures and drag Girl01_FacialAnimMap into the Albedo texture slot. Put the shader XibToon on it. If you don't already have XibToon, [you can download it here](https://www.patreon.com/file?h=28304378&i=4125859). (It is also attached to this post.)
 
-![](https://c10.patreonusercontent.com/3/eyJwIjoxfQ%3D%3D/patreon-media/p/post/28304378/615663c77d2f4cb5998e450290798ab6/1.png){:width="300px"}
+![](https://github.com/Xibanya/ShaderTutorials/blob/master/Img/11%20Cutout/02.png){:width="100%"}
 
 Now let's drag the material ClaireFeatures into the material slots on Girl_Brows_Geo, Girl_Eyes_Geo, and Girl_Mouth_Geo in the hierarchy.
 
