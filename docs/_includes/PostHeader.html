@@ -5,8 +5,8 @@
 <span class="navitem"><a href="{{site.url}}{{site.baseurl}}{{last.url}}">◀ Part {{page.last}}, {{last.title}}</a> • </span>
 {% endif %}
 <span class="navitem"><a href="{{site.url}}{{site.baseurl}}">{{site.title}}</a></span>
-{% if page.next %}
-{% assign go = site.data.directory[page.next] %}
-<span class="navitem"> • <a href="{{site.url}}{{site.baseurl}}{{go.url}}">Part {{page.next}}, {{go.title}} ▶</a></span>
+{% if page.after %}
+{% assign go = site.data.directory[page.after] %}
+<span class="navitem"> • <a href="{{site.url}}{{site.baseurl}}{{go.url}}">Part {{page.after}}: {{go.title}} ▶</a></span>
 {% endif %}
 </div>
