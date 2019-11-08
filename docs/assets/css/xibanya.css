@@ -20,9 +20,11 @@ a small {
   display:block;
 }
 .navitem {
-  background-color: transparent;
+  font-size: 18px;
+  line-height: 24px;
 }
 .tutorial-nav {
+  background-color: transparent;
   margin: auto;
   text-align: center;
 }
