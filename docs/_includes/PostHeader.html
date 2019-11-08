@@ -1,12 +1,13 @@
 
 <div class="tutorial-nav">
-{% if page.last %}
-{% assign last = site.data.directory[page.last] %}
-<span class="navitem"><a href="{{site.url}}{{site.baseurl}}{{last.url}}">◀ Part {{page.last}}, {{last.title}}</a> • </span>
+{% assign part = site.data.directory[page.part] %}
+{% if part.last %}
+{% assign last = site.data.directory[part.last] %}
+<span class="navitem"><a href="{{site.url}}{{site.baseurl}}{{last.url}}">◀ Part {{part.last}}: {{last.title}}</a> • </span>
 {% endif %}
 <span class="navitem"><a href="{{site.url}}{{site.baseurl}}">{{site.title}}</a></span>
-{% if page.after %}
-{% assign go = site.data.directory[page.after] %}
-<span class="navitem"> • <a href="{{site.url}}{{site.baseurl}}{{go.url}}">Part {{page.after}}: {{go.title}} ▶</a></span>
+{% if part.next %}
+{% assign go = site.data.directory[part.next] %}
+<span class="navitem"> • <a href="{{site.url}}{{site.baseurl}}{{go.url}}">Part {{part.next}}: {{go.title}} ▶</a></span>
 {% endif %}
 </div>
