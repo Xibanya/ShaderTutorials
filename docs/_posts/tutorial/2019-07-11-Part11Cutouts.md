@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: post
 title: Cutouts
-date: 2019-07-11 13:45:00
+date: 2019-07-11 13:45:11
 categories: [tutorial]
 tags: [clip]
+last:10
+next:12
 ---
 Last time [we learned how to do toon shading](https://www.patreon.com/posts/part-10-toon-for-28235014)!
 
