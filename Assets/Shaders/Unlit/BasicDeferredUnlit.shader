@@ -51,7 +51,7 @@ Shader "Xibanya/Unit/BasicDeferredUnlit"
 					o.normal = v.normal;
 					return o;
 				}
-
+//implemented as described on https://catlikecoding.com/unity/tutorials/rendering/part-13/
 				struct FragmentOutput {
 #if defined(DEFERRED_PASS)
 					float4 gBuffer0 : SV_Target0;
