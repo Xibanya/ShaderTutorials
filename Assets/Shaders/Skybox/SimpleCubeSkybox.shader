@@ -1,3 +1,7 @@
+//https://twitter.com/ManuelaXibanya
+//https://www.patreon.com/teamdogpit
+//Shared under a CreativeCommonsAttribution 4.0 International License
+
 Shader "Xibanya/Skybox/SimpleCubeSkybox"
 {
 	Properties
