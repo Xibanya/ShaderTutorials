@@ -39,7 +39,7 @@ Shader "Xibanya/Unit/BasicDeferredUnlit"
 				{
 					float4 pos		: SV_POSITION;
 					float2 uv		: TEXCOORD0;
-					float3 normal	: NORMAL;
+					float3 normal		: NORMAL;
 				};
 
 				v2f vert(appdata_base v)
