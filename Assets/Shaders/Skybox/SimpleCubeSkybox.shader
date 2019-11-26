@@ -48,6 +48,7 @@ Shader "Xibanya/Skybox/SimpleCubemap"
 			#pragma vertex vert
 			#pragma fragment frag
 			#pragma multi_compile_fog
+			#pragma multi_compile_instancing
 			#include "UnityCG.cginc"
 
 			struct appdata_t {
