@@ -1,59 +1,149 @@
-﻿Shader "Xibanya/Unit/BasicUnlit"
+//questions? hmu https://twitter.com/ManuelaXibanya
+//https://www.patreon.com/teamdogpit
+Shader "Xibanya/Unit/BasicUnlit"
 {
 	Properties
 	{
 		[HDR]_Color("Color", Color) = (1, 1, 1, 1)
 		_MainTex("Main Tex", 2D) = "white" {}
 		[Enum(Off,0,Front,1,Back,2)] _Cull("Cull", Int) = 2
+		_Cutoff("Alpha cutoff", Range(0,1)) = 0.5
 	}
-
 		SubShader
 		{
-			Tags { "RenderType" = "Opaque" }
-
-			LOD 100
-			Cull[_Cull]
-
-		Pass
-		{
-			CGPROGRAM
-
-			#pragma vertex vert
-			#pragma fragment frag
-			#pragma exclude_renderers nomrt
-			#pragma multi_compile_instancing
-			#pragma multi_compile ___ UNITY_HDR_ON
-			#include "UnityCG.cginc"
-
-			sampler2D	_MainTex;
-			float4		_MainTex_ST;
-			half4		_Color;
-
-			struct v2f
+			Pass
 			{
-				float4 pos	: SV_POSITION;
-				float2 uv	: TEXCOORD0;
-			};
+				Name "ShadowCaster"
+				Tags { "LightMode" = "ShadowCaster" }
 
-			v2f vert(appdata_base v)
-			{
-				v2f o;
-				UNITY_SETUP_INSTANCE_ID(v);
-				o.pos = UnityObjectToClipPos(v.vertex);
-				o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-				return o;
+				ZWrite On ZTest LEqual
+
+				CGPROGRAM
+				#pragma target 3.0
+				#pragma exclude_renderers nomrt gles
+				#pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
+				#pragma multi_compile_shadowcaster
+				#pragma vertex vertShadowCaster
+				#pragma fragment fragShadowCaster
+				#include "UnityStandardShadow.cginc"
+				ENDCG
 			}
-
-			half4 frag(v2f i) : SV_Target
+			Pass 
 			{
-				half4 c = tex2D(_MainTex, i.uv) * _Color;
-				#ifdef UNITY_HDR_ON
-				return c;
-				#else
-				return exp2(-c);
-				#endif
+				Name "FORWARDBASE"
+				Tags 
+				{ 
+					"LightMode" = "ForwardBase" 
+					"IsEmissive" = "True"
+				}
+				Lighting Off
+				LOD 100
+				Cull[_Cull]
+				CGPROGRAM
+				#pragma vertex vert
+				#pragma target 2.0
+				#pragma fragment frag
+				#pragma multi_compile_instancing
+				#pragma multi_compile ___ UNITY_HDR_ON
+				#include "UnityCG.cginc"
+				sampler2D	_MainTex;
+				float4		_MainTex_ST;
+				half4		_Color;
+				half		_Cutoff;
+				struct v2f
+				{
+					float4 pos		: SV_POSITION;
+					float2 uv		: TEXCOORD0;
+				};
+				v2f vert(appdata_base v)
+				{
+					v2f o;
+					UNITY_SETUP_INSTANCE_ID(v);
+					o.pos = UnityObjectToClipPos(v.vertex);
+					o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
+					return o;
+				}
+				half4 frag(v2f i) : SV_TARGET
+				{
+					half4 c = tex2D(_MainTex, i.uv) * _Color;
+					clip(c.a - _Cutoff);
+					#ifndef UNITY_HDR_ON
+					c.rgb = exp2(-c.rgb);
+					#endif
+					return c;
+				}
+				ENDCG
 			}
-			ENDCG
-		}
+			Pass
+			{
+				Name "DEFERRED"
+				Tags
+				{
+					"IsEmissive" = "True"
+					"LightMode" = "Deferred"
+					"RenderType" = "TransparentCutout"
+				}
+				Cull[_Cull]
+				ZWrite On
+				Lighting Off
+				LOD 100
+			
+				CGPROGRAM
+				#pragma target 2.0
+				#pragma vertex vert
+				#pragma fragment frag
+				#pragma exclude_renderers nomrt
+				#pragma multi_compile_instancing
+				#pragma multi_compile ___ UNITY_HDR_ON
+				#include "UnityCG.cginc"
+
+				sampler2D	_MainTex;
+				float4		_MainTex_ST;
+				half4		_Color;
+				half		_Cutoff;
+
+				struct v2f
+				{
+					float4 pos		: SV_POSITION;
+					float2 uv		: TEXCOORD0;
+					float3 normal		: NORMAL;
+				};
+
+				v2f vert(appdata_base v)
+				{
+					v2f o;
+					UNITY_SETUP_INSTANCE_ID(v);
+					o.pos = UnityObjectToClipPos(v.vertex);
+					o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
+					o.normal = v.normal;
+					return o;
+				}
+
+				struct FragmentOutput 
+				{
+					float4 gBuffer0 : SV_Target0;
+					float4 gBuffer1 : SV_Target1;
+					float4 gBuffer2 : SV_Target2;
+					float4 gBuffer3 : SV_Target3;
+				};
+
+				FragmentOutput frag(v2f i)
+				{
+					half4 c = tex2D(_MainTex, i.uv) * _Color;
+					clip(c.a - _Cutoff);
+					#ifndef UNITY_HDR_ON
+					c.rgb = exp2(-c.rgb);
+					#endif
+					FragmentOutput o;
+					o.gBuffer0.rgb = c.rgb;
+					o.gBuffer0.a = 0;
+					o.gBuffer1.rgb = c.rgb;
+					o.gBuffer1.a = 0;
+					o.gBuffer2 = float4(i.normal * 0.5 + 0.5, 1);
+					o.gBuffer3 = c;
+					return output;
+				}
+				ENDCG
+			}
 	}
 }
