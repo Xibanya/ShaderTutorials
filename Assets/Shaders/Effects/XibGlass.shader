@@ -1,4 +1,4 @@
-Shader "Xibanya/Effects/XibGlass"
+Shader "Xibanya/Effect/XibGlass"
 {
 	Properties
 	{
@@ -13,7 +13,7 @@ Shader "Xibanya/Effects/XibGlass"
 		_ShadowColor("Shadow Color", Color) = (0,0,0,1)
 		[Space]
 		[Header(Rim)]
-		[HDR]_RimColor("Rim Color", Color) = (0.5556639, 0.3725525, 0.8679245,1)
+		[HDR]_RimColor("Rim Color", Color) = (0.5556639, 0.3725525, 0.8679245, 1)
 		_RimPower("Rim Fill", Range(0, 2)) = 0.1
 		_RimSmooth("Rim Smoothness", Range(0.5, 1)) = 1
 		_SideRimSize("Side Rim Size", Range(0, 1)) = 0.5
@@ -23,7 +23,7 @@ Shader "Xibanya/Effects/XibGlass"
 		_Metallic("Metallic", Range(0, 1)) = 0.5
 		_Occlusion("Occlusion", Range(0, 1)) = 1
 		[Space]
-		[HDR]_GlossColor("Gloss Color", Color) = (1,1,1,1)
+		[HDR]_GlossColor("Gloss Color", Color) = (0, 1, 0.9897847, 1)
 		_GlossSize("Gloss Size", Range(0, 1)) = 0.5
 		_GlossSmoothness("Gloss Smoothness", Range(0, 1)) = 0
 	}
@@ -31,17 +31,10 @@ Shader "Xibanya/Effects/XibGlass"
 		{
 			Tags { "Queue" = "Transparent" "RenderType" = "Transparent" }
 
-			Blend SrcAlpha OneMinusSrcAlpha
-			Pass
-			{
-				ZWrite On
-				ColorMask A
-			}
 			GrabPass{ }
 
-			ColorMask RGB
 			CGPROGRAM
-			#pragma surface surf Glass addshadow
+			#pragma surface surf Glass
 
 			sampler2D	_MainTex;
 			sampler2D	_GrabTexture;
