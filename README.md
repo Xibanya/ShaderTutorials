@@ -24,3 +24,5 @@ Collection of shaders used in tutorial series Shaders For People Who Don't Know 
 * [Part 17: Scrolling Patterns](https://www.patreon.com/posts/30578089)
 * [Part 18: Packed textures and Keywords](https://www.patreon.com/posts/part-18-packed-30816226)
 * [Part 19: Custom Editors](https://www.patreon.com/posts/31342678)
+* [Part 20: Image Effects](https://www.patreon.com/posts/31597594)
+* [Part 21: GrabPass](https://www.patreon.com/posts/making-glass-1-31955204)
