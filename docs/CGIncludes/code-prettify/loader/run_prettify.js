@@ -32,10 +32,11 @@
 "DOMContentLoaded",x,!1);z[v](n+"readystatechange",x,!1);k[v](n+"load",x,!1)}}function T(){U&&aa(function(){var g=M.length;ca(g?function(){for(var r=0;r<g;++r)(function(g){k.setTimeout(function(){k.exports[M[g]].apply(k,arguments)},0)})(r)}:void 0)})}for(var k=window,z=document,L=z.documentElement,N=z.head||z.getElementsByTagName("head")[0]||L,B="",F=z.getElementsByTagName("script"),l=F.length;0<=--l;){var O=F[l],Y=O.src.match(/^[^?#]*\/run_prettify\.js(\?[^#]*)?(?:#.*)?$/);if(Y){B=Y[1]||"";O.parentNode.removeChild(O);
 break}}var U=!0,H=[],P=[],M=[];B.replace(/[?&]([^&=]+)=([^&]+)/g,function(g,r,x){x=decodeURIComponent(x);r=decodeURIComponent(r);"autorun"==r?U=!/^[0fn]/i.test(x):"lang"==r?H.push(x):"skin"==r?P.push(x):"callback"==r&&M.push(x)});
 l=0;for(B=H.length;l<B;++l)(function(){var g=z.createElement("script");g.onload=g.onerror=g.onreadystatechange=function(){!g||g.readyState&&!/loaded|complete/.test(g.readyState)||(g.onerror=g.onload=g.onreadystatechange=null,--S,S||k.setTimeout(T,0),g.parentNode&&g.parentNode.removeChild(g),
-g=null)};g.type="text/javascript";g.src="code-prettify/loader/lang-"+encodeURIComponent(H[l])+".js";
+g=null)};g.type="text/javascript";
+g.src="https://xibanya.github.io/ShaderTutorials/CGIncludes/code-prettify/loader/lang-"+encodeURIComponent(H[l])+".js";
 N.insertBefore(g,N.firstChild)})(H[l]);
-for(var S=H.length,F=[],l=0,B=P.length;l<B;++l)F.push("code-prettify/loader/skins/"+encodeURIComponent(P[l])+".css");
-F.push("code-prettify/loader/prettify.css");
+for(var S=H.length,F=[],l=0,B=P.length;l<B;++l)F.push("https://xibanya.github.io/ShaderTutorials/CGIncludes/code-prettify/loader/skins/"+encodeURIComponent(P[l])+".css");
+F.push("https://xibanya.github.io/ShaderTutorials/CGIncludes/code-prettify/loader/prettify.css");
 (function(g){function r(l){if(l!==x){var k=z.createElement("link");k.rel="stylesheet";
 
 k.type="text/css";
