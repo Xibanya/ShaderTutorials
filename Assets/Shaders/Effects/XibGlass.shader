@@ -29,7 +29,7 @@ Shader "Xibanya/Special/XibGlass"
     {
         Tags { "RenderType" = "Transparent" "Queue" = "Transparent" }
        
-		GrabPass{ }
+	GrabPass{ }
 
         CGPROGRAM
         #pragma surface surf StandardGlass
