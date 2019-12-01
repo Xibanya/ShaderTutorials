@@ -1,0 +1,92 @@
+[
+    {
+        "Field": "UNITY_SPECCUBE_LOD_EXPONENT",
+        "ID": 1,
+        "Include": "UnityStandardConfig",
+        "MarkupType": "kwd",
+        "My Comments": null,
+        "Name": "UNITY_SPECCUBE_LOD_EXPONENT",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_SPECCUBE_LOD_STEPS",
+        "ID": 2,
+        "Include": "UnityStandardConfig",
+        "MarkupType": "kwd",
+        "My Comments": null,
+        "Name": "UNITY_SPECCUBE_LOD_STEPS",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_CONSERVE_ENERGY",
+        "ID": 3,
+        "Include": "UnityStandardConfig",
+        "MarkupType": "kwd",
+        "My Comments": null,
+        "Name": "UNITY_CONSERVE_ENERGY",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_CONSERVE_ENERGY_MONOCHROME",
+        "ID": 4,
+        "Include": "UnityStandardConfig",
+        "MarkupType": "kwd",
+        "My Comments": null,
+        "Name": "UNITY_CONSERVE_ENERGY_MONOCHROME",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_SAMPLE_FULL_SH_PER_PIXEL",
+        "ID": 5,
+        "Include": "UnityStandardConfig",
+        "MarkupType": "kwd",
+        "My Comments": null,
+        "Name": "UNITY_SAMPLE_FULL_SH_PER_PIXEL",
+        "Official Comments": "Lightmap UVs and ambient color from SHL2 are shared in the vertex to pixel interpolators. Do full SH evaluation in the pixel shader when static lightmap and LIGHTPROBE_SH is enabled."
+    },
+    {
+        "Field": "UNITY_BRDF_GGX",
+        "ID": 6,
+        "Include": "UnityStandardConfig",
+        "MarkupType": "kwd",
+        "My Comments": null,
+        "Name": "UNITY_BRDF_GGX",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_TANGENT_ORTHONORMALIZE",
+        "ID": 7,
+        "Include": "UnityStandardConfig",
+        "MarkupType": "kwd",
+        "My Comments": null,
+        "Name": "UNITY_TANGENT_ORTHONORMALIZE",
+        "Official Comments": "Orthnormalize Tangent Space basis per-pixel\nNecessary to support high-quality normal-maps. Compatible with Maya and Marmoset.\nHowever xNormal expects oldschool non-orthnormalized basis - essentially preventing good looking normal-maps :(\nDue to the fact that xNormal is probably _the most used tool to bake out normal-maps today_ we have to stick to old ways for now.\n\nDisabled by default, until xNormal has an option to bake proper normal-maps."
+    },
+    {
+        "Field": "UNITY_STANDARD_SIMPLE",
+        "ID": 8,
+        "Include": "UnityStandardConfig",
+        "MarkupType": "kwd",
+        "My Comments": null,
+        "Name": "UNITY_STANDARD_SIMPLE",
+        "Official Comments": "Simplified Standard Shader is off by default and should not be used for Legacy Shaders"
+    },
+    {
+        "Field": "UNITY_REQUIRE_FRAG_WORLDPOS",
+        "ID": 9,
+        "Include": "UnityStandardConfig",
+        "MarkupType": "kwd",
+        "My Comments": null,
+        "Name": "UNITY_REQUIRE_FRAG_WORLDPOS",
+        "Official Comments": "Setup a new define with meaningful name to know if we require world pos in fragment shader"
+    },
+    {
+        "Field": "UNITY_PACK_WORLDPOS_WITH_TANGENT",
+        "ID": 10,
+        "Include": "UnityStandardConfig",
+        "MarkupType": "kwd",
+        "My Comments": null,
+        "Name": "UNITY_PACK_WORLDPOS_WITH_TANGENT",
+        "Official Comments": "Should we pack worldPos along tangent (saving an interpolator)\nWe want to skip this on mobile platforms, because worldpos gets packed into mediump"
+    }
+]
