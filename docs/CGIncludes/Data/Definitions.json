@@ -1827,32 +1827,32 @@
         "Overload": null
     },
     {
-        "Field": "Albedo(",
+        "Field": "Albedo",
         "ID": 262,
         "Include": "UnityStandardInput",
         "Official Comments": null,
-        "Overload": null
+        "Overload": "float4"
     },
     {
-        "Field": "Alpha(",
+        "Field": "Alpha",
         "ID": 263,
         "Include": "UnityStandardInput",
         "Official Comments": null,
-        "Overload": null
+        "Overload": "float2"
     },
     {
-        "Field": "Occlusion(",
+        "Field": "Occlusion",
         "ID": 264,
         "Include": "UnityStandardInput",
         "Official Comments": null,
-        "Overload": null
+        "Overload": "float2"
     },
     {
         "Field": "SpecularGloss",
         "ID": 265,
         "Include": "UnityStandardInput",
         "Official Comments": null,
-        "Overload": null
+        "Overload": ""
     },
     {
         "Field": "MetallicGloss",
@@ -1869,11 +1869,11 @@
         "Overload": null
     },
     {
-        "Field": "Emission(",
+        "Field": "Emission",
         "ID": 268,
         "Include": "UnityStandardInput",
         "Official Comments": null,
-        "Overload": null
+        "Overload": "float2"
     },
     {
         "Field": "NormalInTangentSpace",
@@ -1883,11 +1883,11 @@
         "Overload": null
     },
     {
-        "Field": "Parallax(",
+        "Field": "Parallax",
         "ID": 270,
         "Include": "UnityStandardInput",
         "Official Comments": null,
-        "Overload": null
+        "Overload": "float4, half3"
     },
     {
         "Field": "UnityGBuffer",
