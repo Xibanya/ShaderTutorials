@@ -1114,5 +1114,71 @@
         "ID": 186,
         "Include": "UnityCG",
         "Official Comments": null
+    },
+    {
+        "Field": "UnityPBSLighting.cginc",
+        "ID": 187,
+        "Include": "UnityPBSLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnpackNormal",
+        "ID": 188,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnpackNormalWithScale",
+        "ID": 189,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "Linear01Depth",
+        "ID": 190,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "LinearEyeDepth",
+        "ID": 191,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "DECODE_EYEDEPTH",
+        "ID": 192,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "COMPUTE_EYEDEPTH",
+        "ID": 193,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "COMPUTE_DEPTH_01",
+        "ID": 194,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "COMPUTE_VIEW_NORMAL",
+        "ID": 195,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "appdata_img",
+        "ID": 196,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "v2f_img",
+        "ID": 197,
+        "Include": "UnityCG",
+        "Official Comments": null
     }
 ]
