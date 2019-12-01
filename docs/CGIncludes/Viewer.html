@@ -1,0 +1,32 @@
+<html><body>
+Shader: <input type="text" id="shader_url" size="20" name="shader_url">
+<button onclick="LoadShader()">Load</button>
+<pre id="shader" class="prettyprint">
+
+</pre>
+<script type="text/javascript">
+var url = new URL(window.location.href);
+var target = url.searchParams.get("target");
+var request = new XMLHttpRequest();
+request.onreadystatechange = function() 
+{
+    if (request.readyState == 4 && request.status == 200) 
+    {
+        document.getElementById("shader").innerHTML = request.responseText;
+    }
+};
+request.open("GET", "target", true);
+request.responseType = 'text';
+request.send();
+
+function LoadShader()
+{
+    var target = document.getElementById("shader_url").value;
+    var base_url = window.location.href.split('?')[0];
+    var destination = base_url + "?target=" + target;
+    window.location.href = destination;
+}
+</script>
+<script src="https://xibanya.github.io/ShaderTutorials/CGIncludes/code-prettify/loader/run_prettify.js?skin=vscode"></script>
+<script src="https://xibanya.github.io/ShaderTutorials/CGIncludes/Data/link_definitions.js"></script>
+</body></html>
