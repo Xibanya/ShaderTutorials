@@ -80,7 +80,7 @@
             float4 <a name="unity_OrthoParams">unity_OrthoParams</a>;
         #if defined(STEREO_CUBEMAP_RENDER_ON)
             //x-component is the half stereo separation value, which a positive for right eye and negative for left eye. The y,z,w components are unused.
-            float4 <a name="unity_OrthoParams">unity_HalfStereoSeparation</a>;
+            float4 <a name="unity_HalfStereoSeparation">unity_HalfStereoSeparation</a>;
         #endif
         CBUFFER_END
         
@@ -323,10 +323,10 @@
         static float4x4 <a name="unity_MatrixTMV">unity_MatrixTMV</a> = transpose(unity_MatrixMV);
         static float4x4 <a name="unity_MatrixITMV">unity_MatrixITMV</a> = transpose(mul(unity_WorldToObject, unity_MatrixInvV));
         // make them macros so that they can be redefined in UnityInstancing.cginc
-        #define <a name="UNITY_MATRIX_MVP">UNITY_MATRIX_MVP</a>    <a href="#unity_MatrixMVP">unity_MatrixMVP</a>
-        #define <a name="UNITY_MATRIX_MV">UNITY_MATRIX_MV</a>     <a href="#unity_MatrixMV">unity_MatrixMV</a>
-        #define <a name="UNITY_MATRIX_T_MV">UNITY_MATRIX_T_MV</a>   <a href="#unity_MatrixTMV">unity_MatrixTMV</a>
-        #define <a name="UNITY_MATRIX_IT_MV">UNITY_MATRIX_IT_MV</a>  <a href="#unity_MatrixITMV">unity_MatrixITMV</a>
+        #define <a name="UNITY_MATRIX_MVP">UNITY_MATRIX_MVP</a>   unity_MatrixMVP
+        #define <a name="UNITY_MATRIX_MV">UNITY_MATRIX_MV</a>     unity_MatrixMV
+        #define <a name="UNITY_MATRIX_T_MV">UNITY_MATRIX_T_MV</a>   unity_MatrixTMV
+        #define <a name="UNITY_MATRIX_IT_MV">UNITY_MATRIX_IT_MV</a>  unity_MatrixITMV
         
         // ----------------------------------------------------------------------------
         //  Deprecated
@@ -340,4 +340,5 @@
         #endif
 </pre>
 <script src="https://xibanya.github.io/ShaderTutorials/CGIncludes/code-prettify/loader/run_prettify.js?skin=vscode"></script>
+<script src="https://xibanya.github.io/ShaderTutorials/CGIncludes/Data/link_definitions.js"></script>
 </body></html>
