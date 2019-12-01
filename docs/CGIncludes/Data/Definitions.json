@@ -1180,5 +1180,65 @@
         "ID": 197,
         "Include": "UnityCG",
         "Official Comments": null
+    },
+    {
+        "Field": "SurfaceOutputStandard",
+        "ID": 198,
+        "Include": "UnityPBSLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "SurfaceOutputStandardSpecular",
+        "ID": 199,
+        "Include": "UnityPBSLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "MultiplyUV",
+        "ID": 200,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "vert_img",
+        "ID": 201,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "V2F_SCREEN_TYPE",
+        "ID": 202,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "ComputeScreenPos",
+        "ID": 203,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "ComputeGrabScreenPos",
+        "ID": 204,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "ComputeNonStereoScreenPos",
+        "ID": 205,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityPixelSnap",
+        "ID": 206,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "TransformViewToProjection",
+        "ID": 207,
+        "Include": "UnityCG",
+        "Official Comments": null
     }
 ]
