@@ -10,6 +10,7 @@ var target = getUrlParam(
 );
 if (target != null && target != "Empty")
 {
+    var request = new XMLHttpRequest();
     request.onreadystatechange = function() 
     {
         if (request.readyState == 4 && request.status == 200) 
