@@ -20,7 +20,7 @@ if (target != null)
             document.getElementById("shader").innerHTML = request.responseText;
         }
     };
-    request.open("GET", "target", true);
+    request.open("GET", target, true);
     request.responseType = 'text';
     request.send();
 }
