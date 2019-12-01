@@ -3,90 +3,264 @@
         "Field": "UNITY_SPECCUBE_LOD_EXPONENT",
         "ID": 1,
         "Include": "UnityStandardConfig",
-        "MarkupType": "kwd",
-        "My Comments": null,
-        "Name": "UNITY_SPECCUBE_LOD_EXPONENT",
         "Official Comments": null
     },
     {
         "Field": "UNITY_SPECCUBE_LOD_STEPS",
         "ID": 2,
         "Include": "UnityStandardConfig",
-        "MarkupType": "kwd",
-        "My Comments": null,
-        "Name": "UNITY_SPECCUBE_LOD_STEPS",
         "Official Comments": null
     },
     {
         "Field": "UNITY_CONSERVE_ENERGY",
         "ID": 3,
         "Include": "UnityStandardConfig",
-        "MarkupType": "kwd",
-        "My Comments": null,
-        "Name": "UNITY_CONSERVE_ENERGY",
         "Official Comments": null
     },
     {
         "Field": "UNITY_CONSERVE_ENERGY_MONOCHROME",
         "ID": 4,
         "Include": "UnityStandardConfig",
-        "MarkupType": "kwd",
-        "My Comments": null,
-        "Name": "UNITY_CONSERVE_ENERGY_MONOCHROME",
         "Official Comments": null
     },
     {
         "Field": "UNITY_SAMPLE_FULL_SH_PER_PIXEL",
         "ID": 5,
         "Include": "UnityStandardConfig",
-        "MarkupType": "kwd",
-        "My Comments": null,
-        "Name": "UNITY_SAMPLE_FULL_SH_PER_PIXEL",
         "Official Comments": "Lightmap UVs and ambient color from SHL2 are shared in the vertex to pixel interpolators. Do full SH evaluation in the pixel shader when static lightmap and LIGHTPROBE_SH is enabled."
     },
     {
         "Field": "UNITY_BRDF_GGX",
         "ID": 6,
         "Include": "UnityStandardConfig",
-        "MarkupType": "kwd",
-        "My Comments": null,
-        "Name": "UNITY_BRDF_GGX",
         "Official Comments": null
     },
     {
         "Field": "UNITY_TANGENT_ORTHONORMALIZE",
         "ID": 7,
         "Include": "UnityStandardConfig",
-        "MarkupType": "kwd",
-        "My Comments": null,
-        "Name": "UNITY_TANGENT_ORTHONORMALIZE",
         "Official Comments": "Orthnormalize Tangent Space basis per-pixel\nNecessary to support high-quality normal-maps. Compatible with Maya and Marmoset.\nHowever xNormal expects oldschool non-orthnormalized basis - essentially preventing good looking normal-maps :(\nDue to the fact that xNormal is probably _the most used tool to bake out normal-maps today_ we have to stick to old ways for now.\n\nDisabled by default, until xNormal has an option to bake proper normal-maps."
     },
     {
         "Field": "UNITY_STANDARD_SIMPLE",
         "ID": 8,
         "Include": "UnityStandardConfig",
-        "MarkupType": "kwd",
-        "My Comments": null,
-        "Name": "UNITY_STANDARD_SIMPLE",
         "Official Comments": "Simplified Standard Shader is off by default and should not be used for Legacy Shaders"
     },
     {
         "Field": "UNITY_REQUIRE_FRAG_WORLDPOS",
         "ID": 9,
         "Include": "UnityStandardConfig",
-        "MarkupType": "kwd",
-        "My Comments": null,
-        "Name": "UNITY_REQUIRE_FRAG_WORLDPOS",
         "Official Comments": "Setup a new define with meaningful name to know if we require world pos in fragment shader"
     },
     {
         "Field": "UNITY_PACK_WORLDPOS_WITH_TANGENT",
         "ID": 10,
         "Include": "UnityStandardConfig",
-        "MarkupType": "kwd",
-        "My Comments": null,
-        "Name": "UNITY_PACK_WORLDPOS_WITH_TANGENT",
         "Official Comments": "Should we pack worldPos along tangent (saving an interpolator)\nWe want to skip this on mobile platforms, because worldpos gets packed into mediump"
+    },
+    {
+        "Field": "UnityShaderVariables.cginc",
+        "ID": 11,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityStandardConfig.cginc",
+        "ID": 12,
+        "Include": "UnityStandardConfig",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityGlobalIllumination.cginc",
+        "ID": 13,
+        "Include": "UnityGlobalIllumination",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_BRDF_PBS",
+        "ID": 14,
+        "Include": "UnityPBSLighting",
+        "Official Comments": "Default BRDF to use:"
+    },
+    {
+        "Field": "UNITY_BRDF_GI",
+        "ID": 15,
+        "Include": "UnityPBSLighting",
+        "Official Comments": "CAUTION: This is deprecated and not use in Untiy shader code, but some asset store plugin still use it, so let here for compatibility"
+    },
+    {
+        "Field": "BRDF_Unity_Indirect",
+        "ID": 16,
+        "Include": "UnityPBSLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_GLOSSY_ENV_FROM_SURFACE",
+        "ID": 17,
+        "Include": "UnityPBSLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_GI",
+        "ID": 18,
+        "Include": "UnityPBSLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "LightingStandard",
+        "ID": 19,
+        "Include": "UnityPBSLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "LightingStandard_Deferred",
+        "ID": 20,
+        "Include": "UnityPBSLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "LightingStandard_GI",
+        "ID": 21,
+        "Include": "UnityPBSLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "LightingStandardSpecular",
+        "ID": 22,
+        "Include": "UnityPBSLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "LightingStandardSpecular_GI",
+        "ID": 23,
+        "Include": "UnityPBSLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityCG.cginc",
+        "ID": 24,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "ReverseBits32",
+        "ID": 25,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "RadicalInverse_VdC",
+        "ID": 26,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "Hammersley2d",
+        "ID": 27,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "Hash",
+        "ID": 28,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "InitRandom",
+        "ID": 29,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "GetLocalFrame(float3 N, out float3 tangentX, out float3 tangentY)",
+        "ID": 30,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "GetLocalFrame(float3 N, out float3 tangentX, out float3 tangentY)",
+        "ID": 31,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "ImportanceSampleCosDir",
+        "ID": 32,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "ImportanceSampleGGXDir",
+        "ID": 33,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "ImportanceSampleLambert",
+        "ID": 34,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "ImportanceSampleGGX",
+        "ID": 35,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "IntegrateLambertDiffuseIBLRef",
+        "ID": 36,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "IntegrateDisneyDiffuseIBLRef",
+        "ID": 37,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "IntegrateSpecularGGXIBLRef",
+        "ID": 38,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "IntegrateDFG",
+        "ID": 39,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "Unity_GlossyEnvironmentData",
+        "ID": 40,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityGlossyEnvironmentSetup",
+        "ID": 41,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "perceptualRoughnessToMipmapLevel",
+        "ID": 42,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "mipmapLevelToPerceptualRoughness",
+        "ID": 43,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
+    },
+    {
+        "Field": "Unity_GlossyEnvironment",
+        "ID": 44,
+        "Include": "UnityImageBasedLighting",
+        "Official Comments": null
     }
 ]
