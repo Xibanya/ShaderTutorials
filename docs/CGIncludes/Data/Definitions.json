@@ -60,19 +60,19 @@
         "Official Comments": "Should we pack worldPos along tangent (saving an interpolator)\nWe want to skip this on mobile platforms, because worldpos gets packed into mediump"
     },
     {
-        "Field": "UnityShaderVariables.cginc",
+        "Field": "UnityShaderVariables",
         "ID": 11,
         "Include": "UnityShaderVariables",
         "Official Comments": null
     },
     {
-        "Field": "UnityStandardConfig.cginc",
+        "Field": "UnityStandardConfig",
         "ID": 12,
         "Include": "UnityStandardConfig",
         "Official Comments": null
     },
     {
-        "Field": "UnityGlobalIllumination.cginc",
+        "Field": "UnityGlobalIllumination",
         "ID": 13,
         "Include": "UnityGlobalIllumination",
         "Official Comments": null
@@ -1749,6 +1749,12 @@
         "Field": "frag_meta",
         "ID": 292,
         "Include": "UnityStandardMeta",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityImageBasedLighting",
+        "ID": 293,
+        "Include": "UnityImageBasedLighting",
         "Official Comments": null
     }
 ]
