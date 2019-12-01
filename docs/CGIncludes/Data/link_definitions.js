@@ -1,14 +1,54 @@
 var xmlhttp = new XMLHttpRequest();
-xmlhttp.onload = MakeLinks;
-xmlhttp.onreadystatechange = MakeLinks;
-xmlhttp.open("GET", "https://xibanya.github.io/ShaderTutorials/CGIncludes/Data/Definitions.json", true);
-xmlhttp.send();
 
+var target = getUrlParam(
+        'target',
+        'Empty'
+);
+if (target != null && target != "Empty")
+{
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function() 
+    {
+        if (request.readyState == 4 && request.status == 200) 
+        {
+            document.getElementById("shader").innerHTML = request.responseText;
+            document.getElementById("shader").className = "prettyprint";
+            PR.prettyPrint();
+            xmlhttp.onload = MakeLinks;
+            xmlhttp.onreadystatechange = MakeLinks;
+            xmlhttp.open("GET", "https://xibanya.github.io/ShaderTutorials/CGIncludes/Data/Definitions.json", true);
+            xmlhttp.send();
+        }
+    };
+    request.open("GET", target, true);
+    request.responseType = 'text';
+    request.send();
+}
+function LoadShader()
+{
+    var target = document.getElementById("shader_url").value;
+    var destination = "https://xibanya.github.io/ShaderTutorials/CGIncludes/Viewer.html?target=" + target;
+    self.location.replace(destination);
+}
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+function getUrlParam(parameter, defaultvalue){
+    var urlparameter = defaultvalue;
+    if(window.location.href.indexOf(parameter) > -1){
+        urlparameter = getUrlVars()[parameter];
+        }
+    return urlparameter;
+}
 function MakeLinks()
 {
-  if (this.readyState == 4 && this.status == 200) 
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) 
     {
-        var definitions = JSON.parse(this.responseText);
+        var definitions = JSON.parse(xmlhttp.responseText);
         var pageName = location.href.split("/").slice(-1);
         console.log("page name is " + pageName)
         definitions.forEach(function(shaderField)
