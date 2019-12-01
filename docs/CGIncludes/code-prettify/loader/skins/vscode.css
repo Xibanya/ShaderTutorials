@@ -23,6 +23,7 @@ pre a {
    transition: all .3s;
    color: inherit; 
    font-weight: bold;
+   font-size: 115%;
 }
 pre a:link {
   text-decoration: none;
