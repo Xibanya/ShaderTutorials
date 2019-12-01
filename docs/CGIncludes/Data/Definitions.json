@@ -1720,5 +1720,35 @@
         "ID": 287,
         "Include": "TerrainTool",
         "Official Comments": null
+    },
+    {
+        "Field": "UnityStandardMeta.cginc",
+        "ID": 288,
+        "Include": "UnityStandardMeta",
+        "Official Comments": null
+    },
+    {
+        "Field": "v2f_meta",
+        "ID": 289,
+        "Include": "UnityStandardMeta",
+        "Official Comments": null
+    },
+    {
+        "Field": "vert_meta",
+        "ID": 290,
+        "Include": "UnityStandardMeta",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityLightmappingAlbedo",
+        "ID": 291,
+        "Include": "UnityStandardMeta",
+        "Official Comments": "Albedo for lightmapping should basically be diffuse color.\nBut rough metals (black diffuse) still scatter quite a lot of light around, so\nwe want to take some of that into account too."
+    },
+    {
+        "Field": "frag_meta",
+        "ID": 292,
+        "Include": "UnityStandardMeta",
+        "Official Comments": null
     }
 ]
