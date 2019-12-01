@@ -778,5 +778,341 @@
         "ID": 130,
         "Include": "UnityGlobalIllumination",
         "Official Comments": null
+    },
+    {
+        "Field": "UNITY_PI",
+        "ID": 131,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_TWO_PI",
+        "ID": 132,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_FOUR_PI",
+        "ID": 133,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_INV_PI",
+        "ID": 134,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_INV_TWO_PI",
+        "ID": 135,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_INV_FOUR_PI",
+        "ID": 136,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_HALF_PI",
+        "ID": 137,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_INV_HALF_PI",
+        "ID": 138,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_ColorSpaceGrey",
+        "ID": 139,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_ColorSpaceDouble",
+        "ID": 140,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_ColorSpaceDielectricSpec",
+        "ID": 141,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_ColorSpaceLuminance",
+        "ID": 142,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "USING_LIGHT_MULTI_COMPILE",
+        "ID": 143,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "SHADOWS_CUBE_IN_DEPTH_TEX",
+        "ID": 144,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "SCALED_NORMAL",
+        "ID": 145,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "LIGHTMAP_RGBM_SCALE",
+        "ID": 146,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "EMISSIVE_RGBM_SCALE",
+        "ID": 147,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "appdata_base",
+        "ID": 148,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "appdata_tan",
+        "ID": 149,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "appdata_full",
+        "ID": 150,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "IsGammaSpace",
+        "ID": 151,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "GammaToLinearSpaceExact",
+        "ID": 152,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "GammaToLinearSpace",
+        "ID": 153,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "LinearToGammaSpaceExact",
+        "ID": 154,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "LinearToGammaSpace",
+        "ID": 155,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityWorldToClipPos",
+        "ID": 156,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityViewToClipPos",
+        "ID": 157,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityObjectToViewPos",
+        "ID": 158,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityWorldToViewPos",
+        "ID": 159,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityObjectToWorldDir",
+        "ID": 160,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityWorldToObjectDir",
+        "ID": 161,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityObjectToWorldNormal",
+        "ID": 162,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityWorldSpaceLightDir",
+        "ID": 163,
+        "Include": "UnityCG",
+        "Official Comments": "Computes world space light direction, from world space position"
+    },
+    {
+        "Field": "WorldSpaceLightDir",
+        "ID": 164,
+        "Include": "UnityCG",
+        "Official Comments": "Computes world space light direction, from object space position\n*Legacy* Please use UnityWorldSpaceLightDir instead"
+    },
+    {
+        "Field": "ObjSpaceLightDir",
+        "ID": 165,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityWorldSpaceViewDir",
+        "ID": 166,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "WorldSpaceViewDir",
+        "ID": 167,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "ObjSpaceViewDir",
+        "ID": 168,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "TANGENT_SPACE_ROTATION",
+        "ID": 169,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "Shade4PointLights",
+        "ID": 170,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "ShadeVertexLightsFull",
+        "ID": 171,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "ShadeVertexLights",
+        "ID": 172,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "SHEvalLinearL0L1",
+        "ID": 173,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "ShadeSH9",
+        "ID": 174,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "ShadeSH3Order",
+        "ID": 175,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "SHEvalLinearL0L1_SampleProbeVolume",
+        "ID": 176,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "ShadeSH12Order",
+        "ID": 177,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "TRANSFORM_TEX",
+        "ID": 178,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "TRANSFORM_UV",
+        "ID": 179,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "v2f_vertex_lit",
+        "ID": 180,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "VertexLight",
+        "ID": 181,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "ParallaxOffset",
+        "ID": 182,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "Luminance",
+        "ID": 183,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "LinearRgbToLuminance",
+        "ID": 184,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityEncodeRGBM",
+        "ID": 185,
+        "Include": "UnityCG",
+        "Official Comments": null
+    },
+    {
+        "Field": "DecodeHDR",
+        "ID": 186,
+        "Include": "UnityCG",
+        "Official Comments": null
     }
 ]
