@@ -9,7 +9,6 @@ xmlhttp.onreadystatechange = function()
         definitions.forEach(function(shaderField)
         {
             var page = "https://xibanya.github.io/ShaderTutorials/CGIncludes/" + shaderField.Include + ".html";
-            var page = shaderField.Include + ".html";
             var linkString = page + "#" + shaderField.Name;
             var newTag = "<a href=\"" + linkString + "\">" + shaderField.Field + "</a>";
             findAndReplace(shaderField.Field, newTag, document.getElementById("test_body"));
