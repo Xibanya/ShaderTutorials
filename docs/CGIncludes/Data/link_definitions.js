@@ -1,5 +1,4 @@
 var xmlhttp = new XMLHttpRequest();
-xmlhttp.addEventListener("progress", MakeLinks);
 xmlhttp.addEventListener("load", MakeLinks);
 xmlhttp.addEventListener("readystatechange", MakeLinks);
 xmlhttp.addEventListener("DOMContentLoaded", MakeLinks);
