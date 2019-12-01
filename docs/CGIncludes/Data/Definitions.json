@@ -1504,5 +1504,29 @@
         "ID": 251,
         "Include": "UnityShadowLibrary",
         "Official Comments": null
+    },
+    {
+        "Field": "UnityShaderUtilities.cginc",
+        "ID": 252,
+        "Include": "UnityShaderUtilities",
+        "Official Comments": null
+    },
+    {
+        "Field": "ODSOffset",
+        "ID": 253,
+        "Include": "UnityShaderUtilities",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityObjectToClipPosODS",
+        "ID": 254,
+        "Include": "UnityShaderUtilities",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityObjectToClipPos",
+        "ID": 255,
+        "Include": "UnityShaderUtilities",
+        "Official Comments": null
     }
 ]
