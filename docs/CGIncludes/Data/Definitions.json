@@ -1240,5 +1240,119 @@
         "ID": 207,
         "Include": "UnityCG",
         "Official Comments": null
+    },
+    {
+        "Field": "UnityStandardUtils.cginc",
+        "ID": 208,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "SpecularStrength",
+        "ID": 209,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "EnergyConservationBetweenDiffuseAndSpecular",
+        "ID": 210,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "OneMinusReflectivityFromMetallic",
+        "ID": 211,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "DiffuseAndSpecularFromMetallic",
+        "ID": 212,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "PreMultiplyAlpha",
+        "ID": 213,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "ParallaxOffset1Step",
+        "ID": 214,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "LerpOneTo",
+        "ID": 215,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnpackScaleNormalDXT5nm",
+        "ID": 216,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnpackScaleNormalRGorAG",
+        "ID": 217,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "LerpWhiteTo",
+        "ID": 218,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnpackScaleNormal",
+        "ID": 219,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "BlendNormals",
+        "ID": 220,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "CreateTangentToWorldPerVertex",
+        "ID": 221,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "ShadeSHPerVertex",
+        "ID": 222,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "BoxProjectedCubemapDirection",
+        "ID": 223,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "CalculateSurfaceGradient",
+        "ID": 224,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "PerturbNormal",
+        "ID": 225,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
+    },
+    {
+        "Field": "CalculateSurfaceNormal",
+        "ID": 226,
+        "Include": "UnityStandardUtils",
+        "Official Comments": null
     }
 ]
