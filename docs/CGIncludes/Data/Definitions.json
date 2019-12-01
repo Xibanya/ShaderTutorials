@@ -1528,5 +1528,95 @@
         "ID": 255,
         "Include": "UnityShaderUtilities",
         "Official Comments": null
+    },
+    {
+        "Field": "UnityStandardInput.cginc",
+        "ID": 256,
+        "Include": "UnityStandardInput",
+        "Official Comments": null
+    },
+    {
+        "Field": "_TANGENT_TO_WORLD",
+        "ID": 257,
+        "Include": "UnityStandardInput",
+        "Official Comments": "Directional lightmaps & Parallax require tangent space too"
+    },
+    {
+        "Field": "_DETAIL",
+        "ID": 258,
+        "Include": "UnityStandardInput",
+        "Official Comments": null
+    },
+    {
+        "Field": "VertexInput",
+        "ID": 259,
+        "Include": "UnityStandardInput",
+        "Official Comments": null
+    },
+    {
+        "Field": "TexCoords",
+        "ID": 260,
+        "Include": "UnityStandardInput",
+        "Official Comments": null
+    },
+    {
+        "Field": "DetailMask",
+        "ID": 261,
+        "Include": "UnityStandardInput",
+        "Official Comments": null
+    },
+    {
+        "Field": "Albedo",
+        "ID": 262,
+        "Include": "UnityStandardInput",
+        "Official Comments": null
+    },
+    {
+        "Field": "Alpha",
+        "ID": 263,
+        "Include": "UnityStandardInput",
+        "Official Comments": null
+    },
+    {
+        "Field": "Occlusion",
+        "ID": 264,
+        "Include": "UnityStandardInput",
+        "Official Comments": null
+    },
+    {
+        "Field": "SpecularGloss",
+        "ID": 265,
+        "Include": "UnityStandardInput",
+        "Official Comments": null
+    },
+    {
+        "Field": "MetallicGloss",
+        "ID": 266,
+        "Include": "UnityStandardInput",
+        "Official Comments": null
+    },
+    {
+        "Field": "MetallicRough",
+        "ID": 267,
+        "Include": "UnityStandardInput",
+        "Official Comments": null
+    },
+    {
+        "Field": "Emission",
+        "ID": 268,
+        "Include": "UnityStandardInput",
+        "Official Comments": null
+    },
+    {
+        "Field": "NormalInTangentSpace",
+        "ID": 269,
+        "Include": "UnityStandardInput",
+        "Official Comments": null
+    },
+    {
+        "Field": "Parallax",
+        "ID": 270,
+        "Include": "UnityStandardInput",
+        "Official Comments": null
     }
 ]
