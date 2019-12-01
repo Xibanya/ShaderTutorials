@@ -138,7 +138,7 @@
         "Official Comments": null
     },
     {
-        "Field": "UnityCG.cginc",
+        "Field": "UnityCG",
         "ID": 24,
         "Include": "UnityCG",
         "Official Comments": null
@@ -264,7 +264,7 @@
         "Official Comments": null
     },
     {
-        "Field": "UnityStandardBRDF.cginc",
+        "Field": "UnityStandardBRDF",
         "ID": 45,
         "Include": "UnityStandardBRDF",
         "Official Comments": null
@@ -1116,7 +1116,7 @@
         "Official Comments": null
     },
     {
-        "Field": "UnityPBSLighting.cginc",
+        "Field": "UnityPBSLighting",
         "ID": 187,
         "Include": "UnityPBSLighting",
         "Official Comments": null
@@ -1242,7 +1242,7 @@
         "Official Comments": null
     },
     {
-        "Field": "UnityStandardUtils.cginc",
+        "Field": "UnityStandardUtils",
         "ID": 208,
         "Include": "UnityStandardUtils",
         "Official Comments": null
@@ -1356,7 +1356,7 @@
         "Official Comments": null
     },
     {
-        "Field": "UnityShadowLibrary.cginc",
+        "Field": "UnityShadowLibrary",
         "ID": 227,
         "Include": "UnityShadowLibrary",
         "Official Comments": null
@@ -1692,7 +1692,7 @@
         "Official Comments": null
     },
     {
-        "Field": "TerrainTool.cginc",
+        "Field": "TerrainTool",
         "ID": 283,
         "Include": "TerrainTool",
         "Official Comments": null
