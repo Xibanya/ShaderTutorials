@@ -1,3 +1,4 @@
+var definitions = null;
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onload = MakeLinks;
 xmlhttp.onreadystatechange = MakeLinks;
@@ -9,7 +10,6 @@ var target = getUrlParam(
 );
 if (target != null && target != "Empty")
 {
-    var request = new XMLHttpRequest();
     request.onreadystatechange = function() 
     {
         if (request.readyState == 4 && request.status == 200) 
@@ -46,19 +46,23 @@ function getUrlParam(parameter, defaultvalue){
 }
 function MakeLinks()
 {
-    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) 
+    if (definitions == null && xmlhttp.readyState == 4 && xmlhttp.status == 200) 
     {
-        var definitions = JSON.parse(xmlhttp.responseText);
+        definitions = JSON.parse(xmlhttp.responseText);
         var pageName = location.href.split("/").slice(-1);
         console.log("page name is " + pageName)
+    }
+    if (definitions != null)
+    {
         definitions.forEach(function(shaderField)
         {
             var page = "https://xibanya.github.io/ShaderTutorials/CGIncludes/" + shaderField.Include + ".html";
             var linkString = page + "#" + shaderField.Field;
             var newTag = "<a href=\"" + linkString + "\">" + shaderField.Field + "</a>";
-            findAndReplace(shaderField.Field, newTag, document.getElementById("test_body"));
+            findAndReplace(shaderField.Field, newTag, document.getElementById("shader"));
         });
     }
+    else { console.log("no definitions!"); }
 }
 
 //adapted from https://j11y.io/snippets/find-and-replace-text-with-javascript/
