@@ -1690,5 +1690,35 @@
         "ID": 282,
         "Include": "UnityLightingCommon",
         "Official Comments": null
+    },
+    {
+        "Field": "TerrainTool.cginc",
+        "ID": 283,
+        "Include": "TerrainTool",
+        "Official Comments": null
+    },
+    {
+        "Field": "_PCUVToBrushUVScales",
+        "ID": 284,
+        "Include": "TerrainTool",
+        "Official Comments": null
+    },
+    {
+        "Field": "_PCUVToBrushUVOffset",
+        "ID": 285,
+        "Include": "TerrainTool",
+        "Official Comments": null
+    },
+    {
+        "Field": "PaintContextUVToBrushUV",
+        "ID": 286,
+        "Include": "TerrainTool",
+        "Official Comments": "function to convert paint context UV to brush uv"
+    },
+    {
+        "Field": "PaintContextUVToHeightmapUV",
+        "ID": 287,
+        "Include": "TerrainTool",
+        "Official Comments": null
     }
 ]
