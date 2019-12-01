@@ -19,6 +19,7 @@ if (target != null && target != "Empty")
         {
             document.getElementById("shader").innerHTML = request.responseText;
             document.getElementById("shader").className = "prettyprint";
+            location.reload();
         }
     };
     request.open("GET", target, true);
