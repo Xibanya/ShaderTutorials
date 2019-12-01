@@ -1,9 +1,6 @@
-<html><body>
-<input type="text" id="shader_url" size="20" name="shader_url">
-<button onclick="LoadShader()">Load</button>
-<pre id="shader" class="prettyprint">
-
-</pre>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://xibanya.github.io/ShaderTutorials/CGIncludes/code-prettify/loader/skins/vscode.css">
 <script type="text/javascript">
 var target = getUrlParam(
         'target',
@@ -24,6 +21,15 @@ if (target != null && target != "Empty")
     request.responseType = 'text';
     request.send();
 }
+</script>
+</head>
+<body>
+<input type="text" id="shader_url" size="20" name="shader_url">
+<button onclick="LoadShader()">Load</button>
+<pre id="shader" class="prettyprint">
+
+</pre>
+<script type="text/javascript">
 function LoadShader()
 {
     var target = document.getElementById("shader_url").value;
