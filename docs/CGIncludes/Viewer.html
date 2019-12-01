@@ -31,7 +31,21 @@ function LoadShader()
     var destination = "https://xibanya.github.io/ShaderTutorials/CGIncludes/Viewer.html?target=" + target;
     window.location.href = destination;
 }
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+function getUrlParam(parameter, defaultvalue){
+    var urlparameter = defaultvalue;
+    if(window.location.href.indexOf(parameter) > -1){
+        urlparameter = getUrlVars()[parameter];
+        }
+    return urlparameter;
+}
 </script>
-<script src="https://xibanya.github.io/ShaderTutorials/CGIncludes/code-prettify/loader/run_viewer.js"></script>
+<script src="https://xibanya.github.io/ShaderTutorials/CGIncludes/code-prettify/loader/run_prettify.js"></script>
 <script src="https://xibanya.github.io/ShaderTutorials/CGIncludes/Data/link_definitions.js"></script>
 </body></html>
