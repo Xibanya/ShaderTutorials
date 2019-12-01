@@ -5,12 +5,11 @@ Shader: <input type="text" id="shader_url" size="20" name="shader_url">
 
 </pre>
 <script type="text/javascript">
-var target = null,
-tmp = [];
-location.search.substr(1).split("&").forEach(function (item) {
-        tmp = item.split("=");
-        if (tmp[0] === "target") result = decodeURIComponent(tmp[1]);
-    });
+
+var target = getUrlParam(
+        'target',
+        'https://raw.githubusercontent.com/Xibanya/ShaderTutorials/master/Assets/Shaders/Effects/XibGlass.shader'
+);
 if (target != null)
 {
     var request = new XMLHttpRequest();
@@ -35,6 +34,20 @@ function LoadShader()
     var target = document.getElementById("shader_url").value;
     var destination = "https://xibanya.github.io/ShaderTutorials/CGIncludes/Viewer.html?target=" + target;
     window.location.href = destination;
+}
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+function getUrlParam(parameter, defaultvalue){
+    var urlparameter = defaultvalue;
+    if(window.location.href.indexOf(parameter) > -1){
+        urlparameter = getUrlVars()[parameter];
+        }
+    return urlparameter;
 }
 </script>
 <script src="https://xibanya.github.io/ShaderTutorials/CGIncludes/code-prettify/loader/run_prettify.js?skin=vscode"></script>
