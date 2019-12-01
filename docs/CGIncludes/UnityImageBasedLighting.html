@@ -4,7 +4,7 @@
         #ifndef UNITY_IMAGE_BASED_LIGHTING_INCLUDED
         #define UNITY_IMAGE_BASED_LIGHTING_INCLUDED
         
-        #include "<a href="UnityCG.html">UnityCG.cginc</a>"
+        #include "UnityCG.cginc"
         #include "UnityStandardConfig.cginc"
         #include "UnityStandardBRDF.cginc"
         
@@ -19,7 +19,7 @@
         // Sample generator
         //-----------------------------------------------------------------------------
         // Ref: http://holger.dammertz.org/stuff/notes_HammersleyOnHemisphere.html
-        uint ReverseBits32(uint bits)
+        uint <a name="ReverseBits32">ReverseBits32</a>(uint bits)
         {
         #if 0 // Shader model 5
             return reversebits(bits);
@@ -33,19 +33,19 @@
         #endif
         }
         //-----------------------------------------------------------------------------
-        float RadicalInverse_VdC(uint bits)
+        float <a name="RadicalInverse_VdC">RadicalInverse_VdC</a>(uint bits)
         {
             return float(ReverseBits32(bits)) * 2.3283064365386963e-10; // 0x100000000
         }
         
         //-----------------------------------------------------------------------------
-        float2 Hammersley2d(uint i, uint maxSampleCount)
+        float2 <a name="Hammersley2d">Hammersley2d</a>(uint i, uint maxSampleCount)
         {
             return float2(float(i) / float(maxSampleCount), RadicalInverse_VdC(i));
         }
         
         //-----------------------------------------------------------------------------
-        float Hash(uint s)
+        float <a name="Hash">Hash</a>(uint s)
         {
             s = s ^ 2747636419u;
             s = s * 2654435769u;
@@ -57,7 +57,7 @@
         }
         
         //-----------------------------------------------------------------------------
-        float2 InitRandom(float2 input)
+        float2 <a name="InitRandom">InitRandom</a>(float2 input)
         {
             float2 r;
             r.x = Hash(uint(input.x * 4294967295.0f));
@@ -71,7 +71,7 @@
         //-----------------------------------------------------------------------------
         
         // generate an orthonormalBasis from 3d unit vector.
-        void GetLocalFrame(float3 N, out float3 tangentX, out float3 tangentY)
+        void <a name="GetLocalFrame(float3 N, out float3 tangentX, out float3 tangentY)">GetLocalFrame(float3 N, out float3 tangentX, out float3 tangentY)</a>
         {
             float3 upVector     = abs(N.z) < 0.999f ? float3(0.0f, 0.0f, 1.0f) : float3(1.0f, 0.0f, 0.0f);
             tangentX            = normalize(cross(upVector, N));
@@ -80,7 +80,7 @@
         
         /*
         // http://orbit.dtu.dk/files/57573287/onb_frisvad_jgt2012.pdf
-        void GetLocalFrame(float3 N, out float3 tangentX, out float3 tangentY)
+        void <a name="GetLocalFrame(float3 N, out float3 tangentX, out float3 tangentY)">GetLocalFrame(float3 N, out float3 tangentX, out float3 tangentY)</a>
         {
             if (N.z < -0.999f) // Handle the singularity
             {
@@ -100,7 +100,7 @@
         // Sampling
         // ----------------------------------------------------------------------------
         
-        void ImportanceSampleCosDir(float2 u,
+        void <a name="ImportanceSampleCosDir">ImportanceSampleCosDir</a>(float2 u,
                                     float3 N,
                                     float3 tangentX,
                                     float3 tangentY,
@@ -118,7 +118,7 @@
         }
         
         //-------------------------------------------------------------------------------------
-        void ImportanceSampleGGXDir(float2 u,
+        void <a name="ImportanceSampleGGXDir">ImportanceSampleGGXDir</a>(float2 u,
                                     float3 V,
                                     float3 N,
                                     float3 tangentX,
@@ -143,7 +143,7 @@
         
         // ----------------------------------------------------------------------------
         // weightOverPdf return the weight (without the diffuseAlbedo term) over pdf. diffuseAlbedo term must be apply by the caller.
-        void ImportanceSampleLambert(
+        void <a name="ImportanceSampleLambert">ImportanceSampleLambert</a>(
             float2 u,
             float3 N,
             float3 tangentX,
@@ -169,7 +169,7 @@
         
         // ----------------------------------------------------------------------------
         // weightOverPdf return the weight (without the Fresnel term) over pdf. Fresnel term must be apply by the caller.
-        void ImportanceSampleGGX(
+        void <a name="ImportanceSampleGGX">ImportanceSampleGGX</a>(
             float2 u,
             float3 V,
             float3 N,
@@ -207,7 +207,7 @@
         // ----------------------------------------------------------------------------
         
         // Ref: Moving Frostbite to PBR (Appendix A)
-        void IntegrateLambertDiffuseIBLRef( out float3 diffuseLighting,
+        void <a name="IntegrateLambertDiffuseIBLRef">IntegrateLambertDiffuseIBLRef</a>( out float3 diffuseLighting,
                                             UNITY_ARGS_TEXCUBE(tex),
                                             float4 texHdrParam, // Multiplier to apply on hdr texture (in case of rgbm)
                                             float3 N,
@@ -246,7 +246,7 @@
         
         // ----------------------------------------------------------------------------
         
-        void IntegrateDisneyDiffuseIBLRef(  out float3 diffuseLighting,
+        void <a name="IntegrateDisneyDiffuseIBLRef">IntegrateDisneyDiffuseIBLRef</a>(  out float3 diffuseLighting,
                                             UNITY_ARGS_TEXCUBE(tex),
                                             float4 texHdrParam, // Multiplier to apply on hdr texture (in case of rgbm)
                                             float3 N,
@@ -295,7 +295,7 @@
         
         // ----------------------------------------------------------------------------
         // Ref: Moving Frostbite to PBR (Appendix A)
-        void IntegrateSpecularGGXIBLRef(out float3 specularLighting,
+        void <a name="IntegrateSpecularGGXIBLRef">IntegrateSpecularGGXIBLRef</a>(out float3 specularLighting,
                                         UNITY_ARGS_TEXCUBE(tex),
                                         float4 texHdrParam, // Multiplier to apply on hdr texture (in case of rgbm)
                                         float3 N,
@@ -347,7 +347,7 @@
         // ----------------------------------------------------------------------------
         
         // Ref: Listing 18 in "Moving Frostbite to PBR" + https://knarkowicz.wordpress.com/2014/12/27/analytical-dfg-term-for-ibl/
-        float4 IntegrateDFG(float3 V, float3 N, float roughness, uint sampleCount)
+        float4 <a name="IntegrateDFG">IntegrateDFG</a>(float3 V, float3 N, float roughness, uint sampleCount)
         {
             float NdotV     = saturate(dot(N, V));
             float4 acc      = float4(0.0f, 0.0f, 0.0f, 0.0f);
@@ -404,7 +404,7 @@
         // ----------------------------------------------------------------------------
         // Ref: Listing 19 in "Moving Frostbite to PBR"
         // IntegrateLD will not work with RGBM cubemap. For now it is use with fp16 cubemap such as those use for real time cubemap.
-        float4 IntegrateLD( UNITY_ARGS_TEXCUBE(tex),
+        float4 <a name="IntegrateLD">IntegrateLD</a>( UNITY_ARGS_TEXCUBE(tex),
                             float3 V,
                             float3 N,
                             float roughness,
