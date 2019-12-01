@@ -400,5 +400,341 @@
         "ID": 67,
         "Include": "UnityStandardBRDF",
         "Official Comments": null
+    },
+    {
+        "Field": "UNITY_MATRIX_P",
+        "ID": 68,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_MATRIX_V",
+        "ID": 69,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_MATRIX_I_V",
+        "ID": 70,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_MATRIX_VP",
+        "ID": 71,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_MATRIX_M",
+        "ID": 72,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_LIGHTMODEL_AMBIENT",
+        "ID": 73,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "_Time",
+        "ID": 74,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "_SinTime",
+        "ID": 75,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "_CosTime",
+        "ID": 76,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_DeltaTime",
+        "ID": 77,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "_WorldSpaceCameraPos",
+        "ID": 78,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "_ProjectionParams",
+        "ID": 79,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "_ScreenParams",
+        "ID": 80,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "_ZBufferParams",
+        "ID": 81,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_OrthoParams",
+        "ID": 82,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_HalfStereoSeparation",
+        "ID": 83,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_CameraProjection",
+        "ID": 84,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_CameraInvProjection",
+        "ID": 85,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_WorldToCamera",
+        "ID": 86,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_CameraToWorld",
+        "ID": 87,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "_WorldSpaceLightPos0",
+        "ID": 88,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "_LightPositionRange",
+        "ID": 89,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityPerDraw",
+        "ID": 90,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_ObjectToWorld",
+        "ID": 91,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_WorldToObject",
+        "ID": 92,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_LODFade",
+        "ID": 93,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_WorldTransformParams",
+        "ID": 94,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_RenderingLayer",
+        "ID": 95,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_Lightmap",
+        "ID": 96,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_LightmapInd",
+        "ID": 97,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_ShadowMask",
+        "ID": 98,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_DynamicLightmap",
+        "ID": 99,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_DynamicDirectionality",
+        "ID": 100,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_DynamicNormal",
+        "ID": 101,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityLightmaps",
+        "ID": 102,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_LightmapST",
+        "ID": 103,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_DynamicLightmapST",
+        "ID": 104,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_SpecCube0",
+        "ID": 105,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_SpecCube1",
+        "ID": 106,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityReflectionProbes",
+        "ID": 107,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_SpecCube0_BoxMax",
+        "ID": 108,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_SpecCube0_BoxMin",
+        "ID": 109,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_SpecCube0_ProbePosition",
+        "ID": 110,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_SpecCube0_HDR",
+        "ID": 111,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_SpecCube1_BoxMax",
+        "ID": 112,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_SpecCube1_BoxMin",
+        "ID": 113,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_SpecCube1_ProbePosition",
+        "ID": 114,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_SpecCube1_HDR",
+        "ID": 115,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_MatrixMVP",
+        "ID": 116,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_MatrixMV",
+        "ID": 117,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_MatrixTMV",
+        "ID": 118,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "unity_MatrixITMV",
+        "ID": 119,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_MATRIX_MVP",
+        "ID": 120,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_MATRIX_MV",
+        "ID": 121,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_MATRIX_T_MV",
+        "ID": 122,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
+    },
+    {
+        "Field": "UNITY_MATRIX_IT_MV",
+        "ID": 123,
+        "Include": "UnityShaderVariables",
+        "Official Comments": null
     }
 ]
