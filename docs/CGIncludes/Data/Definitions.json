@@ -1506,7 +1506,7 @@
         "Official Comments": null
     },
     {
-        "Field": "UnityShaderUtilities.cginc",
+        "Field": "UnityShaderUtilities",
         "ID": 252,
         "Include": "UnityShaderUtilities",
         "Official Comments": null
@@ -1530,7 +1530,7 @@
         "Official Comments": null
     },
     {
-        "Field": "UnityStandardInput.cginc",
+        "Field": "UnityStandardInput",
         "ID": 256,
         "Include": "UnityStandardInput",
         "Official Comments": null
@@ -1620,7 +1620,7 @@
         "Official Comments": null
     },
     {
-        "Field": "UnityGBuffer.cginc",
+        "Field": "UnityGBuffer",
         "ID": 271,
         "Include": "UnityGBuffer",
         "Official Comments": null
@@ -1650,7 +1650,7 @@
         "Official Comments": "In some cases like for terrain, the user want to apply a specific weight to the attribute"
     },
     {
-        "Field": "UnityLightingCommon.cginc",
+        "Field": "UnityLightingCommon",
         "ID": 276,
         "Include": "UnityLightingCommon",
         "Official Comments": null
@@ -1722,7 +1722,7 @@
         "Official Comments": null
     },
     {
-        "Field": "UnityStandardMeta.cginc",
+        "Field": "UnityStandardMeta",
         "ID": 288,
         "Include": "UnityStandardMeta",
         "Official Comments": null
