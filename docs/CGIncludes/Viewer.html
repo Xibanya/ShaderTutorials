@@ -19,7 +19,6 @@ if (target != null && target != "Empty")
         {
             document.getElementById("shader").innerHTML = request.responseText;
             document.getElementById("shader").className = "prettyprint";
-            location.reload();
         }
     };
     request.open("GET", target, true);
@@ -32,6 +31,7 @@ function LoadShader()
     var target = document.getElementById("shader_url").value;
     var destination = "https://xibanya.github.io/ShaderTutorials/CGIncludes/Viewer.html?target=" + target;
     window.location.href = destination;
+    location.reload();
 }
 function getUrlVars() {
     var vars = {};
