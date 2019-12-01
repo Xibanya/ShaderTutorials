@@ -6,15 +6,15 @@
     #ifndef UNITY_PBS_LIGHTING_INCLUDED
     #define UNITY_PBS_LIGHTING_INCLUDED
     
-    #include "<a href="UnityShaderVariables.html">UnityShaderVariables.cginc</a>"
+    #include "UnityShaderVariables.cginc"
     #include "UnityStandardConfig.cginc"
     #include "UnityLightingCommon.cginc"
     #include "UnityGBuffer.cginc"
-    #include "<a href="UnityGlobalIllumination.html">UnityGlobalIllumination.cginc</a>"
+    #include "UnityGlobalIllumination.cginc"
     
     //-------------------------------------------------------------------------------------
     // Default BRDF to use:
-    #if !defined (UNITY_BRDF_PBS) // allow to explicitly override BRDF in custom shader
+    #if !defined (<a name="UNITY_BRDF_PBS">UNITY_BRDF_PBS</a>) // allow to explicitly override BRDF in custom shader
         // still add safe net for low shader models, otherwise we might end up with shaders failing to compile
         #if SHADER_TARGET < 30 || defined(SHADER_TARGET_SURFACE_ANALYSIS) // only need "something" for surface shader analysis pass; pick the cheap one
             #define UNITY_BRDF_PBS BRDF3_Unity_PBS
@@ -34,24 +34,24 @@
     // CAUTION: This is deprecated and not use in Untiy shader code, but some asset store plugin still use it, so let here for compatibility
     
     #if !defined (UNITY_BRDF_GI)
-        #define UNITY_BRDF_GI BRDF_Unity_Indirect
+        #define <a name="UNITY_BRDF_GI">UNITY_BRDF_GI</a> BRDF_Unity_Indirect
     #endif
     
-    inline half3 BRDF_Unity_Indirect (half3 baseColor, half3 specColor, half oneMinusReflectivity, half smoothness, half3 normal, half3 viewDir, half occlusion, UnityGI gi)
+    inline half3 <a name="BRDF_Unity_Indirect">BRDF_Unity_Indirect</a> (half3 baseColor, half3 specColor, half oneMinusReflectivity, half smoothness, half3 normal, half3 viewDir, half occlusion, UnityGI gi)
     {
         return half3(0,0,0);
     }
     
-    #define UNITY_GLOSSY_ENV_FROM_SURFACE(x, s, data)               \
+    #define <a name="UNITY_GLOSSY_ENV_FROM_SURFACE">UNITY_GLOSSY_ENV_FROM_SURFACE</a>(x, s, data)               \
         Unity_GlossyEnvironmentData g;                              \
         g.roughness /* perceptualRoughness */   = SmoothnessToPerceptualRoughness(s.Smoothness); \
         g.reflUVW = reflect(-data.worldViewDir, s.Normal);  \
     
     
     #if defined(UNITY_PASS_DEFERRED) && UNITY_ENABLE_REFLECTION_BUFFERS
-        #define UNITY_GI(x, s, data) x = UnityGlobalIllumination (data, s.Occlusion, s.Normal);
+        #define <a name="UNITY_GIDeferredReflections">UNITY_GI</a>(x, s, data) x = UnityGlobalIllumination (data, s.Occlusion, s.Normal);
     #else
-        #define UNITY_GI(x, s, data)                                \
+        #define <a name="UNITY_GI">UNITY_GI</a>(x, s, data)                                \
             UNITY_GLOSSY_ENV_FROM_SURFACE(g, s, data);              \
             x = UnityGlobalIllumination (data, s.Occlusion, s.Normal, g);
     #endif
@@ -75,7 +75,7 @@
         fixed Alpha;        // alpha for transparencies
     };
     
-    inline half4 LightingStandard (<a href="#SurfaceOutputStandard">SurfaceOutputStandard</a> s, float3 viewDir, UnityGI gi)
+    inline half4 <a name="LightingStandard">LightingStandard</a> (<a href="#SurfaceOutputStandard">SurfaceOutputStandard</a> s, float3 viewDir, UnityGI gi)
     {
         s.Normal = normalize(s.Normal);
     
@@ -93,7 +93,7 @@
         return c;
     }
     
-    inline half4 LightingStandard_Deferred (<a href="#SurfaceOutputStandard">SurfaceOutputStandard</a> s, float3 viewDir, UnityGI gi, out half4 outGBuffer0, out half4 outGBuffer1, out half4 outGBuffer2)
+    inline half4 <a name="LightingStandard_Deferred">LightingStandard_Deferred</a> (<a href="#SurfaceOutputStandard">SurfaceOutputStandard</a> s, float3 viewDir, UnityGI gi, out half4 outGBuffer0, out half4 outGBuffer1, out half4 outGBuffer2)
     {
         half oneMinusReflectivity;
         half3 specColor;
@@ -114,7 +114,7 @@
         return emission;
     }
     
-    inline void LightingStandard_GI (
+    inline void <a name="LightingStandard_GI">LightingStandard_GI</a> (
         <a href="#SurfaceOutputStandard">SurfaceOutputStandard</a> s,
         UnityGIInput data,
         inout UnityGI gi)
@@ -141,7 +141,7 @@
         fixed Alpha;        // alpha for transparencies
     };
     
-    inline half4 LightingStandardSpecular (<a name="SurfaceOutputStandardSpecular">SurfaceOutputStandardSpecular</a> s, float3 viewDir, UnityGI gi)
+    inline half4 <a name="LightingStandardSpecular">LightingStandardSpecular</a> (<a name="SurfaceOutputStandardSpecular">SurfaceOutputStandardSpecular</a> s, float3 viewDir, UnityGI gi)
     {
         s.Normal = normalize(s.Normal);
     
@@ -159,7 +159,7 @@
         return c;
     }
     
-    inline half4 LightingStandardSpecular_Deferred (<a name="SurfaceOutputStandardSpecular">SurfaceOutputStandardSpecular</a> s, float3 viewDir, UnityGI gi, out half4 outGBuffer0, out half4 outGBuffer1, out half4 outGBuffer2)
+    inline half4 <a name="LightingStandardSpecular">LightingStandardSpecular_Deferred</a> (<a name="SurfaceOutputStandardSpecular">SurfaceOutputStandardSpecular</a> s, float3 viewDir, UnityGI gi, out half4 outGBuffer0, out half4 outGBuffer1, out half4 outGBuffer2)
     {
         // energy conservation
         half oneMinusReflectivity;
@@ -180,7 +180,7 @@
         return emission;
     }
     
-    inline void LightingStandardSpecular_GI (
+    inline void <a name="LightingStandardSpecular_GI">LightingStandardSpecular_GI</a> (
         SurfaceOutputStandardSpecular s,
         UnityGIInput data,
         inout UnityGI gi)
