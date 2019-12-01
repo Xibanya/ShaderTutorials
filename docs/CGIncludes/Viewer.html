@@ -18,6 +18,7 @@ if (target != null)
         if (request.readyState == 4 && request.status == 200) 
         {
             document.getElementById("shader").innerHTML = request.responseText;
+            document.getElementById("shader").className = "prettyprint";
         }
     };
     request.open("GET", target, true);
