@@ -1,22 +1,22 @@
 var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() 
+xmlhttp.addEventListener("progress", MakeLinks);
+xmlhttp.addEventListener("load", MakeLinks);
+xmlhttp.addEventListener("readystatechange", MakeLinks);
+xmlhttp.addEventListener("readystatechange", DOMContentLoaded);
+xmlhttp.open("GET", "https://xibanya.github.io/ShaderTutorials/CGIncludes/Data/Definitions.json", true);
+xmlhttp.send();
+
+function MakeLinks(evt)
 {
-    if (this.readyState == 4 && this.status == 200) 
+    var definitions = JSON.parse(this.responseText);
+    definitions.forEach(function(shaderField)
     {
-        var definitions = JSON.parse(this.responseText);
-        var pageName = location.href.split("/").slice(-1);
-        console.log("page name is " + pageName)
-        definitions.forEach(function(shaderField)
-        {
             var page = "https://xibanya.github.io/ShaderTutorials/CGIncludes/" + shaderField.Include + ".html";
             var linkString = page + "#" + shaderField.Field;
             var newTag = "<a href=\"" + linkString + "\">" + shaderField.Field + "</a>";
             findAndReplace(shaderField.Field, newTag, document.getElementById("test_body"));
-        });
-    }
-};
-xmlhttp.open("GET", "https://xibanya.github.io/ShaderTutorials/CGIncludes/Data/Definitions.json", true);
-xmlhttp.send();
+    });
+}
 
 //adapted from https://j11y.io/snippets/find-and-replace-text-with-javascript/
 function findAndReplace(searchText, replacement, searchNode) {
