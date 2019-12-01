@@ -736,5 +736,47 @@
         "ID": 123,
         "Include": "UnityShaderVariables",
         "Official Comments": null
+    },
+    {
+        "Field": "DecodeDirectionalSpecularLightmap",
+        "ID": 124,
+        "Include": "UnityGlobalIllumination",
+        "Official Comments": null
+    },
+    {
+        "Field": "ResetUnityLight",
+        "ID": 125,
+        "Include": "UnityGlobalIllumination",
+        "Official Comments": null
+    },
+    {
+        "Field": "SubtractMainLightWithRealtimeAttenuationFromLightmap",
+        "ID": 126,
+        "Include": "UnityGlobalIllumination",
+        "Official Comments": null
+    },
+    {
+        "Field": "ResetUnityGI",
+        "ID": 127,
+        "Include": "UnityGlobalIllumination",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityGI_Base",
+        "ID": 128,
+        "Include": "UnityGlobalIllumination",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityGI_IndirectSpecular",
+        "ID": 129,
+        "Include": "UnityGlobalIllumination",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityGlobalIllumination",
+        "ID": 130,
+        "Include": "UnityGlobalIllumination",
+        "Official Comments": null
     }
 ]
