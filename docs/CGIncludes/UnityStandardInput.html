@@ -84,7 +84,7 @@
         return tex2D (_DetailMask, uv).a;
     }
     
-    half3 <a name="Albedo">Albedo</a>(float4 texcoords)
+    half3 <a name="Albedo(">Albedo</a>(float4 texcoords)
     {
         half3 albedo = _Color.rgb * tex2D (_MainTex, texcoords.xy).rgb;
     #if _DETAIL
@@ -109,7 +109,7 @@
         return albedo;
     }
     
-    half <a name="Alpha">Alpha</a>(float2 uv)
+    half <a name="Alpha(">Alpha</a>(float2 uv)
     {
     #if defined(_SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A)
         return _Color.a;
@@ -118,7 +118,7 @@
     #endif
     }
     
-    half <a name="Occlusion">Occlusion</a>(float2 uv)
+    half <a name="Occlusion(">Occlusion</a>(float2 uv)
     {
     #if (SHADER_TARGET < 30)
         // SM20: instruction count limitation
@@ -192,7 +192,7 @@
         return mg;
     }
     
-    half3 <a name="Emission">Emission</a>(float2 uv)
+    half3 <a name="Emission(">Emission</a>(float2 uv)
     {
     #ifndef _EMISSION
         return 0;
@@ -226,7 +226,7 @@
     }
     #endif
     
-    float4 <a name="Parallax">Parallax</a> (float4 texcoords, half3 viewDir)
+    float4 <a name="Parallax(">Parallax</a> (float4 texcoords, half3 viewDir)
     {
     #if !defined(_PARALLAXMAP) || (SHADER_TARGET < 30)
         // Disable parallax on pre-SM3.0 shader target models
