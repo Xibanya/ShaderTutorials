@@ -38,10 +38,7 @@
                return}
                x("poll")
           }
-          function x(r)
-          {
-               if("readystatechange"!=r.type||"complete"==z.readyState)("load"==r.type?k:z)[B](n+r.type,x,!1),!l&&(l=!0)&&g.call(k,r.type||r)
-          }
+          function x(r){if("readystatechange"!=r.type||"complete"==z.readyState)("load"==r.type?k:z)[B](n+r.type,x,!1),!l&&(l=!0)&&g.call(k,r.type||r)}
           var X=z.addEventListener, l=!1, E=!0, v=X?"addEventListener":"attachEvent", 
           // B=X?"removeEventListener":"detachEvent", 
           n=X?"":"on";
