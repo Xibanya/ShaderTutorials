@@ -28,7 +28,7 @@ function LoadShader()
 {
     var target = document.getElementById("shader_url").value;
     var destination = "https://xibanya.github.io/ShaderTutorials/CGIncludes/Viewer.html?target=" + target;
-    window.location.href = destination;
+    self.location.replace(destination);
 }
 function getUrlVars() {
     var vars = {};
