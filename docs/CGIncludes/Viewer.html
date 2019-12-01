@@ -1,16 +1,16 @@
 <html><body>
 <input type="text" id="shader_url" size="20" name="shader_url">
 <button onclick="LoadShader()">Load</button>
-<pre id="shader" class="prettyprint">
+<pre id="shader">
 
 </pre>
 <script type="text/javascript">
 
 var target = getUrlParam(
         'target',
-        'https://raw.githubusercontent.com/Xibanya/ShaderTutorials/master/Assets/Shaders/Effects/XibGlass.shader'
+        'Empty'
 );
-if (target != null)
+if (target != null && target != "Empty")
 {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function() 
@@ -24,10 +24,6 @@ if (target != null)
     request.open("GET", target, true);
     request.responseType = 'text';
     request.send();
-}
-else 
-{
-    console.log("no target param");
 }
 
 function LoadShader()
