@@ -1354,5 +1354,155 @@
         "ID": 226,
         "Include": "UnityStandardUtils",
         "Official Comments": null
+    },
+    {
+        "Field": "UnityShadowLibrary.cginc",
+        "ID": 227,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnitySampleShadowmap_PCF3x3",
+        "ID": 228,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnitySampleShadowmap_PCF5x5",
+        "ID": 229,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnitySampleShadowmap_PCF7x7",
+        "ID": 230,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnitySampleShadowmap_PCF5x5Gaussian",
+        "ID": 231,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "LPPV_SampleProbeOcclusion",
+        "ID": 232,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnitySampleBakedOcclusion",
+        "ID": 233,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityGetRawBakedOcclusions",
+        "ID": 234,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityMixRealtimeAndBakedShadows",
+        "ID": 235,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityComputeShadowFadeDistance",
+        "ID": 236,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityComputeShadowFade",
+        "ID": 237,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityCombineShadowcoordComponents",
+        "ID": 238,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityGetReceiverPlaneDepthBias",
+        "ID": 239,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "_UnityInternalGetAreaAboveFirstTexelUnderAIsocelesRectangleTriangle",
+        "ID": 240,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "_UnityInternalGetAreaPerTexel_3TexelsWideTriangleFilter",
+        "ID": 241,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "_UnityInternalGetWeightPerTexel_3TexelsWideTriangleFilter",
+        "ID": 242,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "_UnityInternalGetWeightPerTexel_5TexelsWideTriangleFilter",
+        "ID": 243,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "_UnityInternalGetWeightPerTexel_7TexelsWideTriangleFilter",
+        "ID": 244,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnitySampleShadowmap_PCF3x3NoHardwareSupport",
+        "ID": 245,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnitySampleShadowmap_PCF3x3Tent",
+        "ID": 246,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnitySampleShadowmap_PCF5x5Tent",
+        "ID": 247,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnitySampleShadowmap_PCF7x7Tent",
+        "ID": 248,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnitySampleShadowmap_PCF3x3Gaussian",
+        "ID": 249,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "HANDLE_SHADOWS_BLENDING_IN_GI",
+        "ID": 250,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
+    },
+    {
+        "Field": "_ShadowMapTexture",
+        "ID": 251,
+        "Include": "UnityShadowLibrary",
+        "Official Comments": null
     }
 ]
