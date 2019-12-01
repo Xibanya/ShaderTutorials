@@ -1566,19 +1566,19 @@
         "Official Comments": null
     },
     {
-        "Field": "Albedo",
+        "Field": "Albedo(",
         "ID": 262,
         "Include": "UnityStandardInput",
         "Official Comments": null
     },
     {
-        "Field": "Alpha",
+        "Field": "Alpha(",
         "ID": 263,
         "Include": "UnityStandardInput",
         "Official Comments": null
     },
     {
-        "Field": "Occlusion",
+        "Field": "Occlusion(",
         "ID": 264,
         "Include": "UnityStandardInput",
         "Official Comments": null
@@ -1602,7 +1602,7 @@
         "Official Comments": null
     },
     {
-        "Field": "Emission",
+        "Field": "Emission(",
         "ID": 268,
         "Include": "UnityStandardInput",
         "Official Comments": null
@@ -1614,7 +1614,7 @@
         "Official Comments": null
     },
     {
-        "Field": "Parallax",
+        "Field": "Parallax(",
         "ID": 270,
         "Include": "UnityStandardInput",
         "Official Comments": null
