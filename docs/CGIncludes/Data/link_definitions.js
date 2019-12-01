@@ -1,4 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = MakeLinks;
 xmlhttp.onreadystatechange = MakeLinks;
 xmlhttp.open("GET", "https://xibanya.github.io/ShaderTutorials/CGIncludes/Data/Definitions.json", true);
 xmlhttp.send();
