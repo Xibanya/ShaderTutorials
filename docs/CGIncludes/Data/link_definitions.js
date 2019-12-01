@@ -1,21 +1,37 @@
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.addEventListener("load", MakeLinks);
-xmlhttp.addEventListener("readystatechange", MakeLinks);
-xmlhttp.addEventListener("DOMContentLoaded", MakeLinks);
-xmlhttp.open("GET", "https://xibanya.github.io/ShaderTutorials/CGIncludes/Data/Definitions.json", true);
-xmlhttp.send();
+var definitions = null;
 
-function MakeLinks(evt)
-{
-    var definitions = JSON.parse(this.responseText);
-    definitions.forEach(function(shaderField)
-    {
-            var page = "https://xibanya.github.io/ShaderTutorials/CGIncludes/" + shaderField.Include + ".html";
-            var linkString = page + "#" + shaderField.Field;
-            var newTag = "<a href=\"" + linkString + "\">" + shaderField.Field + "</a>";
-            findAndReplace(shaderField.Field, newTag, document.getElementById("test_body"));
-    });
+var request = new XMLHttpRequest();
+request.open("GET", "https://xibanya.github.io/ShaderTutorials/CGIncludes/Data/Definitions.json", false);
+request.send(null);
+request.onreadystatechange = function() {
+  if (request.readyState === 4 && request.status === 200 ) 
+  {
+        definitions = JSON.parse(this.responseText);
+        MakeLinks();
+  }
 }
+request.addEventListener('load', (event) => {
+    console.log("loaded");
+    definitions = JSON.parse(this.responseText);
+    MakeLinks();
+});
+function MakeLinks()
+{
+    if (definitions != null)
+    {
+        definitions.forEach(function(shaderField)
+        {
+                var page = "https://xibanya.github.io/ShaderTutorials/CGIncludes/" + shaderField.Include + ".html";
+                var linkString = page + "#" + shaderField.Field;
+                var newTag = "<a href=\"" + linkString + "\">" + shaderField.Field + "</a>";
+                findAndReplace(shaderField.Field, newTag, document.getElementById("test_body"));
+        });
+    }
+    else
+    {
+        console.log("definitions is null");
+    }
+};
 
 //adapted from https://j11y.io/snippets/find-and-replace-text-with-javascript/
 function findAndReplace(searchText, replacement, searchNode) {
@@ -51,4 +67,4 @@ function findAndReplace(searchText, replacement, searchNode) {
         parent.insertBefore(frag, currentNode);
         parent.removeChild(currentNode);
     }
-}
+};
