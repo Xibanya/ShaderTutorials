@@ -6,7 +6,7 @@
         
         // Functions sampling light environment data (lightmaps, light probes, reflection probes), which is then returned as the UnityGI struct.
         
-        #include "<a href="UnityImageBasedLighting.html">UnityImageBasedLighting.cginc</a>"
+        #include "UnityImageBasedLighting.cginc"
         #include "UnityStandardUtils.cginc"
         #include "UnityShadowLibrary.cginc"
         
@@ -49,7 +49,7 @@
             outLight.ndotl = 0; // Not used
         }
         
-        inline half3 SubtractMainLightWithRealtimeAttenuationFromLightmap (half3 lightmap, half attenuation, half4 bakedColorTex, half3 normalWorld)
+        inline half3 <a name="SubtractMainLightWithRealtimeAttenuationFromLightmap">SubtractMainLightWithRealtimeAttenuationFromLightmap</a> (half3 lightmap, half attenuation, half4 bakedColorTex, half3 normalWorld)
         {
             // Let's try to make realtime shadows work on a surface, which already contains
             // baked lighting and shadowing from the main sun light.
@@ -81,7 +81,7 @@
         
         inline void <a name="ResetUnityGI">ResetUnityGI</a>(out UnityGI outGI)
         {
-            <a href="#ResetUnityLight">ResetUnityLight</a>(outGI.light);
+            ResetUnityLight(outGI.light);
             outGI.indirect.diffuse = 0;
             outGI.indirect.specular = 0;
         }
@@ -149,7 +149,7 @@
         }
         
         
-        inline half3<a name="UnityGI_IndirectSpecularDOG">UnityGI_IndirectSpecular</a>(UnityGIInput data, half occlusion, <a href="UnityImageBasedLighting.html#Unity_GlossyEnvironmentData">Unity_GlossyEnvironmentData</a> glossIn)
+        inline half3<a name="UnityGI_IndirectSpecular">UnityGI_IndirectSpecular</a>(UnityGIInput data, half occlusion, Unity_GlossyEnvironmentData glossIn)
         {
             half3 specular;
         
@@ -189,18 +189,18 @@
         }
         
         // Deprecated old prototype but can't be move to Deprecated.cginc file due to order dependency
-        inline half3 <a name="UnityGI_IndirectSpecularDONG">UnityGI_IndirectSpecular</a>(UnityGIInput data, half occlusion, half3 normalWorld, Unity_GlossyEnvironmentData glossIn)
+        inline half3 UnityGI_IndirectSpecular(UnityGIInput data, half occlusion, half3 normalWorld, Unity_GlossyEnvironmentData glossIn)
         {
             // normalWorld is not used
             return UnityGI_IndirectSpecular(data, occlusion, glossIn);
         }
         
-        inline UnityGI <a name="UnityGlobalIlluminationDON">UnityGlobalIllumination</a> (UnityGIInput data, half occlusion, half3 normalWorld)
+        inline UnityGI <a name="UnityGlobalIllumination">UnityGlobalIllumination</a> (UnityGIInput data, half occlusion, half3 normalWorld)
         {
             return UnityGI_Base(data, occlusion, normalWorld);
         }
         
-        inline UnityGI <a name="UnityGlobalIlluminationDONG">UnityGlobalIllumination</a> (UnityGIInput data, half occlusion, half3 normalWorld, Unity_GlossyEnvironmentData glossIn)
+        inline UnityGI UnityGlobalIllumination (UnityGIInput data, half occlusion, half3 normalWorld, Unity_GlossyEnvironmentData glossIn)
         {
             UnityGI o_gi = UnityGI_Base(data, occlusion, normalWorld);
             o_gi.indirect.specular = UnityGI_IndirectSpecular(data, occlusion, glossIn);
@@ -211,7 +211,7 @@
         // Old UnityGlobalIllumination signatures. Kept only for backward compatibility and will be removed soon
         //
         
-        inline UnityGI <a name="UnityGlobalIlluminationDONGR">UnityGlobalIllumination</a> (UnityGIInput data, half occlusion, half smoothness, half3 normalWorld, bool reflections)
+        inline UnityGI UnityGlobalIllumination (UnityGIInput data, half occlusion, half smoothness, half3 normalWorld, bool reflections)
         {
             if(reflections)
             {
@@ -223,7 +223,7 @@
                 return UnityGlobalIllumination(data, occlusion, normalWorld);
             }
         }
-        inline UnityGI <a name="UnityGlobalIlluminationDOSN">UnityGlobalIllumination</a> (UnityGIInput data, half occlusion, half smoothness, half3 normalWorld)
+        inline UnityGI UnityGlobalIllumination (UnityGIInput data, half occlusion, half smoothness, half3 normalWorld)
         {
         #if defined(UNITY_PASS_DEFERRED) && UNITY_ENABLE_REFLECTION_BUFFERS
             // No need to sample reflection probes during deferred G-buffer pass
