@@ -25,6 +25,12 @@ if (target != null && target != "Empty")
     request.responseType = 'text';
     request.send();
 }
+function LoadShader()
+{
+    var target = document.getElementById("shader_url").value;
+    var destination = "https://xibanya.github.io/ShaderTutorials/CGIncludes/Viewer.html?target=" + target;
+    window.location.href = destination;
+}
 </script>
 <script src="https://xibanya.github.io/ShaderTutorials/CGIncludes/code-prettify/loader/run_viewer.js"></script>
 <script src="https://xibanya.github.io/ShaderTutorials/CGIncludes/Data/link_definitions.js"></script>
