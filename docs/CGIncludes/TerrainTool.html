@@ -1,0 +1,31 @@
+<html><body>
+<pre class="prettyprint">
+    // Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
+
+    #ifndef TERRAIN_TOOL_INCLUDED
+    #define TERRAIN_TOOL_INCLUDED
+    
+    
+    // function to convert paint context UV to brush uv
+    float4 <a name="_PCUVToBrushUVScales">_PCUVToBrushUVScales</a>;
+    float2 <a name="_PCUVToBrushUVOffset">_PCUVToBrushUVOffset</a>;
+    float2 <a name="PaintContextUVToBrushUV">PaintContextUVToBrushUV</a>(float2 pcUV)
+    {
+        return _PCUVToBrushUVScales.xy * pcUV.x +
+               _PCUVToBrushUVScales.zw * pcUV.y +
+               _PCUVToBrushUVOffset;
+    }
+    
+    
+    float2 <a name="PaintContextUVToHeightmapUV">PaintContextUVToHeightmapUV</a>(float2 pcUV)
+    {
+        return pcUV;
+    }
+    
+    
+    #endif
+    
+</pre>
+<script src="https://xibanya.github.io/ShaderTutorials/CGIncludes/code-prettify/loader/run_prettify.js?skin=vscode"></script>
+<script src="https://xibanya.github.io/ShaderTutorials/CGIncludes/Data/link_definitions.js"></script>
+</body></html>
