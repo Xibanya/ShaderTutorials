@@ -680,7 +680,7 @@
         normal.z = sqrt(1 - saturate(dot(normal.xy, normal.xy)));
         return normal;
     }
-    inline fixed3 UnpackNormal(fixed4 packednormal)
+    inline fixed3 <a name="UnpackNormal">UnpackNormal</a>(fixed4 packednormal)
     {
     #if defined(UNITY_NO_DXT5nm)
         return packednormal.xyz * 2 - 1;
@@ -689,7 +689,7 @@
     #endif
     }
     
-    fixed3 UnpackNormalWithScale(fixed4 packednormal, float scale)
+    fixed3 <a name="UnpackNormalWithScale">UnpackNormalWithScale</a>(fixed4 packednormal, float scale)
     {
     #ifndef UNITY_NO_DXT5nm
         // Unpack normal as DXT5nm (1, y, 1, x) or BC5 (x, y, 0, 1)
@@ -703,12 +703,12 @@
     }
     
     // Z buffer to linear 0..1 depth
-    inline float Linear01Depth( float z )
+    inline float <a name="Linear01Depth">Linear01Depth</a>( float z )
     {
         return 1.0 / (_ZBufferParams.x * z + _ZBufferParams.y);
     }
     // Z buffer to linear depth
-    inline float LinearEyeDepth( float z )
+    inline float <a name="LinearEyeDepth">LinearEyeDepth</a>( float z )
     {
         return 1.0 / (_ZBufferParams.z * z + _ZBufferParams.w);
     }
@@ -753,22 +753,22 @@
     #endif
     
     // Depth render texture helpers
-    #define DECODE_EYEDEPTH(i) LinearEyeDepth(i)
-    #define COMPUTE_EYEDEPTH(o) o = -UnityObjectToViewPos( v.vertex ).z
-    #define COMPUTE_DEPTH_01 -(UnityObjectToViewPos( v.vertex ).z * _ProjectionParams.w)
-    #define COMPUTE_VIEW_NORMAL normalize(mul((float3x3)UNITY_MATRIX_IT_MV, v.normal))
+    #define <a name="DECODE_EYEDEPTH">DECODE_EYEDEPTH(i)</a> LinearEyeDepth(i)
+    #define <a name="COMPUTE_EYEDEPTH">COMPUTE_EYEDEPTH(o)</a> o = -UnityObjectToViewPos( v.vertex ).z
+    #define <a name="COMPUTE_DEPTH_01">COMPUTE_DEPTH_01</a> -(UnityObjectToViewPos( v.vertex ).z * _ProjectionParams.w)
+    #define <a name="COMPUTE_VIEW_NORMAL">COMPUTE_VIEW_NORMAL</a> normalize(mul((float3x3)UNITY_MATRIX_IT_MV, v.normal))
     
     // Helpers used in image effects. Most image effects use the same
     // minimal vertex shader (vert_img).
     
-    struct appdata_img
+    struct <a name="appdata_img">appdata_img</a>
     {
         float4 vertex : POSITION;
         half2 texcoord : TEXCOORD0;
         UNITY_VERTEX_INPUT_INSTANCE_ID
     };
     
-    struct v2f_img
+    struct <a name="v2f_img">v2f_img</a>
     {
         float4 pos : SV_POSITION;
         half2 uv : TEXCOORD0;
