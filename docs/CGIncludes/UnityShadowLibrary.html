@@ -774,17 +774,17 @@ half <a name="UnitySampleShadowmap_PCF5x5Gaussian">UnitySampleShadowmap_PCF5x5Ga
     return shadow;
 }
 
-half <a name="UnitySampleShadowmap_PCF3x3">UnitySampleShadowmap_PCF3x3(float4 coord, float3 receiverPlaneDepthBias)
+half <a name="UnitySampleShadowmap_PCF3x3">UnitySampleShadowmap_PCF3x3</a>(float4 coord, float3 receiverPlaneDepthBias)
 {
     return UnitySampleShadowmap_PCF3x3Tent(coord, receiverPlaneDepthBias);
 }
 
-half <a name="UnitySampleShadowmap_PCF5x5">UnitySampleShadowmap_PCF5x5(float4 coord, float3 receiverPlaneDepthBias)
+half <a name="UnitySampleShadowmap_PCF5x5">UnitySampleShadowmap_PCF5x5</a>(float4 coord, float3 receiverPlaneDepthBias)
 {
     return UnitySampleShadowmap_PCF5x5Tent(coord, receiverPlaneDepthBias);
 }
 
-half <a name="UnitySampleShadowmap_PCF7x7">UnitySampleShadowmap_PCF7x7(float4 coord, float3 receiverPlaneDepthBias)
+half <a name="UnitySampleShadowmap_PCF7x7">UnitySampleShadowmap_PCF7x7</a>(float4 coord, float3 receiverPlaneDepthBias)
 {
     return UnitySampleShadowmap_PCF7x7Tent(coord, receiverPlaneDepthBias);
 }
