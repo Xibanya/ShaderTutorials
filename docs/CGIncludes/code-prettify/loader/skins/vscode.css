@@ -17,6 +17,19 @@ pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
 pre .atv { color: #ce9178 } /* attribute value */
 pre .dec { color: #b5cea8 } /* decimal   */
 pre .dir { color: #C586C0 } /* directive   */
+pre a {
+  -webkit-transition: all .3s;
+   -moz-transition: all .3s;
+   transition: all .3s;
+   color: inherit; 
+   font-weight: bold;
+}
+pre a:link {
+  text-decoration: none;
+}
+pre a:hover {
+  text-decoration: underline;
+}
 
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } /* IE indents via margin-left */
