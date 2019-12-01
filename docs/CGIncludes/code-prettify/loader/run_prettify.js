@@ -101,7 +101,7 @@
     for(var S=H.length,F=[],l=0,B=P.length;l<B;++l)
     //F.push("https://xibanya.github.io/ShaderTutorials/CGIncludes/code-prettify/loader/skins/"+encodeURIComponent(P[l])+".css");
     F.push("https://xibanya.github.io/ShaderTutorials/CGIncludes/code-prettify/loader/skins/vscode.css");
-    F.push("https://xibanya.github.io/ShaderTutorials/CGIncludes/code-prettify/loader/prettify.css");
+    //F.push("https://xibanya.github.io/ShaderTutorials/CGIncludes/code-prettify/loader/prettify.css");
     (function(g)
     {
           function r(l)
