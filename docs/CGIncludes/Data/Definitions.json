@@ -1648,5 +1648,47 @@
         "ID": 275,
         "Include": "UnityGBuffer",
         "Official Comments": "In some cases like for terrain, the user want to apply a specific weight to the attribute"
+    },
+    {
+        "Field": "UnityLightingCommon.cginc",
+        "ID": 276,
+        "Include": "UnityLightingCommon",
+        "Official Comments": null
+    },
+    {
+        "Field": "_LightColor0",
+        "ID": 277,
+        "Include": "UnityLightingCommon",
+        "Official Comments": null
+    },
+    {
+        "Field": "_SpecColor",
+        "ID": 278,
+        "Include": "UnityLightingCommon",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityLight",
+        "ID": 279,
+        "Include": "UnityLightingCommon",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityIndirect",
+        "ID": 280,
+        "Include": "UnityLightingCommon",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityGI",
+        "ID": 281,
+        "Include": "UnityLightingCommon",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityGIInput",
+        "ID": 282,
+        "Include": "UnityLightingCommon",
+        "Official Comments": null
     }
 ]
