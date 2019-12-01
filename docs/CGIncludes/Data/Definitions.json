@@ -1618,5 +1618,35 @@
         "ID": 270,
         "Include": "UnityStandardInput",
         "Official Comments": null
+    },
+    {
+        "Field": "UnityGBuffer.cginc",
+        "ID": 271,
+        "Include": "UnityGBuffer",
+        "Official Comments": null
+    },
+    {
+        "Field": "UnityStandardData",
+        "ID": 272,
+        "Include": "UnityGBuffer",
+        "Official Comments": "Main structure that store the data from the standard shader (i.e user input)"
+    },
+    {
+        "Field": "UnityStandardDataToGbuffer",
+        "ID": 273,
+        "Include": "UnityGBuffer",
+        "Official Comments": "This will encode UnityStandardData into GBuffer"
+    },
+    {
+        "Field": "UnityStandardDataFromGbuffer",
+        "ID": 274,
+        "Include": "UnityGBuffer",
+        "Official Comments": "This decode the Gbuffer in a UnityStandardData struct"
+    },
+    {
+        "Field": "UnityStandardDataApplyWeightToGbuffer",
+        "ID": 275,
+        "Include": "UnityGBuffer",
+        "Official Comments": "In some cases like for terrain, the user want to apply a specific weight to the attribute"
     }
 ]
