@@ -2,7 +2,7 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.addEventListener("progress", MakeLinks);
 xmlhttp.addEventListener("load", MakeLinks);
 xmlhttp.addEventListener("readystatechange", MakeLinks);
-xmlhttp.addEventListener("readystatechange", DOMContentLoaded);
+xmlhttp.addEventListener("DOMContentLoaded", MakeLinks);
 xmlhttp.open("GET", "https://xibanya.github.io/ShaderTutorials/CGIncludes/Data/Definitions.json", true);
 xmlhttp.send();
 
