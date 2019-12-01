@@ -1,5 +1,8 @@
 var xmlhttp = new XMLHttpRequest();
-
+xmlhttp.onload = MakeLinks;
+xmlhttp.onreadystatechange = MakeLinks;
+xmlhttp.open("GET", "https://xibanya.github.io/ShaderTutorials/CGIncludes/Data/Definitions.json", true);
+xmlhttp.send();
 var target = getUrlParam(
         'target',
         'Empty'
@@ -14,10 +17,7 @@ if (target != null && target != "Empty")
             document.getElementById("shader").innerHTML = request.responseText;
             document.getElementById("shader").className = "prettyprint";
             PR.prettyPrint();
-            xmlhttp.onload = MakeLinks;
-            xmlhttp.onreadystatechange = MakeLinks;
-            xmlhttp.open("GET", "https://xibanya.github.io/ShaderTutorials/CGIncludes/Data/Definitions.json", true);
-            xmlhttp.send();
+            MakeLinks();
         }
     };
     request.open("GET", target, true);
