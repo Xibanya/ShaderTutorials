@@ -1,19 +1,18 @@
 <html>
-<body>
 <pre class="prettyprint">
     // Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
 
     #ifndef UNITY_CG_INCLUDED
     #define UNITY_CG_INCLUDED
     
-    #define UNITY_PI            3.14159265359f
-    #define UNITY_TWO_PI        6.28318530718f
-    #define UNITY_FOUR_PI       12.56637061436f
-    #define UNITY_INV_PI        0.31830988618f
-    #define UNITY_INV_TWO_PI    0.15915494309f
-    #define UNITY_INV_FOUR_PI   0.07957747155f
-    #define UNITY_HALF_PI       1.57079632679f
-    #define UNITY_INV_HALF_PI   0.636619772367f
+    #define <a name="UNITY_PI">UNITY_PI</a>            3.14159265359f
+    #define <a name="UNITY_TWO_PI">UNITY_TWO_PI</a>        6.28318530718f
+    #define <a name="UNITY_FOUR_PI">UNITY_FOUR_PI</a>       12.56637061436f
+    #define <a name="UNITY_INV_PI">UNITY_INV_PI</a>        0.31830988618f
+    #define <a name="UNITY_INV_TWO_PI">UNITY_INV_TWO_PI</a>    0.15915494309f
+    #define <a name="UNITY_INV_FOUR_PI">UNITY_INV_FOUR_PI</a>   0.07957747155f
+    #define <a name="UNITY_HALF_PI">UNITY_HALF_PI</a>       1.57079632679f
+    #define <a name="UNITY_INV_HALF_PI">UNITY_INV_HALF_PI</a>   0.636619772367f
     
     // Should SH (light probe / ambient) calculations be performed?
     // - When both static and dynamic lightmaps are available, no SH evaluation is performed
@@ -27,10 +26,10 @@
     #include "UnityInstancing.cginc"
     
     #ifdef UNITY_COLORSPACE_GAMMA
-    #define unity_ColorSpaceGrey fixed4(0.5, 0.5, 0.5, 0.5)
+    #define <a name="unity_ColorSpaceGrey">unity_ColorSpaceGrey</a> fixed4(0.5, 0.5, 0.5, 0.5)
     #define <a name="unity_ColorSpaceDouble">unity_ColorSpaceDouble</a> fixed4(2.0, 2.0, 2.0, 2.0)
-    #define unity_ColorSpaceDielectricSpec half4(0.220916301, 0.220916301, 0.220916301, 1.0 - 0.220916301)
-    #define unity_ColorSpaceLuminance half4(0.22, 0.707, 0.071, 0.0) // Legacy: alpha is set to 0.0 to specify gamma mode
+    #define <a name="unity_ColorSpaceDielectricSpec">unity_ColorSpaceDielectricSpec</a> half4(0.220916301, 0.220916301, 0.220916301, 1.0 - 0.220916301)
+    #define <a name="unity_ColorSpaceLuminance">unity_ColorSpaceLuminance</a> half4(0.22, 0.707, 0.071, 0.0) // Legacy: alpha is set to 0.0 to specify gamma mode
     #else // Linear values
     #define unity_ColorSpaceGrey fixed4(0.214041144, 0.214041144, 0.214041144, 0.5)
     #define unity_ColorSpaceDouble fixed4(4.59479380, 4.59479380, 4.59479380, 2.0)
@@ -43,20 +42,20 @@
     
     
     #if defined (DIRECTIONAL) || defined (DIRECTIONAL_COOKIE) || defined (POINT) || defined (SPOT) || defined (POINT_NOATT) || defined (POINT_COOKIE)
-    #define USING_LIGHT_MULTI_COMPILE
+    #define <a name="USING_LIGHT_MULTI_COMPILE">USING_LIGHT_MULTI_COMPILE</a>
     #endif
     
     #if defined(SHADER_API_D3D11) || defined(SHADER_API_PSSL) || defined(SHADER_API_METAL) || defined(SHADER_API_GLCORE) || defined(SHADER_API_GLES3) || defined(SHADER_API_VULKAN) || defined(SHADER_API_SWITCH) // D3D11, D3D12, XB1, PS4, iOS, macOS, tvOS, glcore, gles3, webgl2.0, Switch
     // Real-support for depth-format cube shadow map.
-    #define SHADOWS_CUBE_IN_DEPTH_TEX
+    #define <a name="SHADOWS_CUBE_IN_DEPTH_TEX">SHADOWS_CUBE_IN_DEPTH_TEX</a>
     #endif
     
-    #define SCALED_NORMAL v.normal
+    #define <a name="SCALED_NORMAL">SCALED_NORMAL</a> v.normal
     
     
     // These constants must be kept in sync with RGBMRanges.h
-    #define LIGHTMAP_RGBM_SCALE 5.0
-    #define EMISSIVE_RGBM_SCALE 97.0
+    #define <a name="LIGHTMAP_RGBM_SCALE">LIGHTMAP_RGBM_SCALE</a> 5.0
+    #define <a name="EMISSIVE_RGBM_SCALE">EMISSIVE_RGBM_SCALE</a> 97.0
     
     struct  <a name="appdata_base">appdata_base</a> {
         float4 vertex : POSITION;
@@ -86,7 +85,7 @@
     };
     
     // Legacy for compatibility with existing shaders
-    inline bool IsGammaSpace()
+    inline bool <a name="IsGammaSpace">IsGammaSpace</a>()
     {
         #ifdef UNITY_COLORSPACE_GAMMA
             return true;
@@ -105,7 +104,7 @@
             return pow(value, 2.2F);
     }
     
-    inline half3 GammaToLinearSpace (half3 sRGB)
+    inline half3 <a name="GammaToLinearSpace">GammaToLinearSpace</a> (half3 sRGB)
     {
         // Approximate version from http://chilliant.blogspot.com.au/2012/08/srgb-approximations-for-hlsl.html?m=1
         return sRGB * (sRGB * (sRGB * 0.305306011h + 0.682171111h) + 0.012522878h);
@@ -114,7 +113,7 @@
         //return half3(GammaToLinearSpaceExact(sRGB.r), GammaToLinearSpaceExact(sRGB.g), GammaToLinearSpaceExact(sRGB.b));
     }
     
-    inline float LinearToGammaSpaceExact (float value)
+    inline float <a name="LinearToGammaSpaceExact">LinearToGammaSpaceExact</a> (float value)
     {
         if (value <= 0.0F)
             return 0.0F;
@@ -126,7 +125,7 @@
             return pow(value, 0.45454545F);
     }
     
-    inline half3 LinearToGammaSpace (half3 linRGB)
+    inline half3 <a name="LinearToGammaSpace">LinearToGammaSpace</a> (half3 linRGB)
     {
         linRGB = max(linRGB, half3(0.h, 0.h, 0.h));
         // An almost-perfect approximation from http://chilliant.blogspot.com.au/2012/08/srgb-approximations-for-hlsl.html?m=1
@@ -143,7 +142,7 @@
     }
     
     // Tranforms position from view to homogenous space
-    inline float4 UnityViewToClipPos( in float3 pos )
+    inline float4 <a name="UnityViewToClipPos">UnityViewToClipPos</a>( in float3 pos )
     {
         return mul(UNITY_MATRIX_P, float4(pos, 1.0));
     }
@@ -159,25 +158,25 @@
     }
     
     // Tranforms position from world to camera space
-    inline float3 UnityWorldToViewPos( in float3 pos )
+    inline float3 <a name="UnityWorldToViewPos">UnityWorldToViewPos</a>( in float3 pos )
     {
         return mul(UNITY_MATRIX_V, float4(pos, 1.0)).xyz;
     }
     
     // Transforms direction from object to world space
-    inline float3 UnityObjectToWorldDir( in float3 dir )
+    inline float3 <a name="UnityObjectToWorldDir">UnityObjectToWorldDir</a>( in float3 dir )
     {
         return normalize(mul((float3x3)unity_ObjectToWorld, dir));
     }
     
     // Transforms direction from world to object space
-    inline float3 UnityWorldToObjectDir( in float3 dir )
+    inline float3 <a name="UnityWorldToObjectDir">UnityWorldToObjectDir</a>( in float3 dir )
     {
         return normalize(mul((float3x3)unity_WorldToObject, dir));
     }
     
     // Transforms normal from object to world space
-    inline float3 UnityObjectToWorldNormal( in float3 norm )
+    inline float3 <a name="UnityObjectToWorldNormal">UnityObjectToWorldNormal</a>( in float3 norm )
     {
     #ifdef UNITY_ASSUME_UNIFORM_SCALING
         return UnityObjectToWorldDir(norm);
@@ -188,7 +187,7 @@
     }
     
     // Computes world space light direction, from world space position
-    inline float3 UnityWorldSpaceLightDir( in float3 worldPos )
+    inline float3 <a name="UnityWorldSpaceLightDir">UnityWorldSpaceLightDir</a>( in float3 worldPos )
     {
         #ifndef USING_LIGHT_MULTI_COMPILE
             return _WorldSpaceLightPos0.xyz - worldPos * _WorldSpaceLightPos0.w;
@@ -203,14 +202,14 @@
     
     // Computes world space light direction, from object space position
     // *Legacy* Please use UnityWorldSpaceLightDir instead
-    inline float3 WorldSpaceLightDir( in float4 localPos )
+    inline float3 <a name="WorldSpaceLightDir">WorldSpaceLightDir</a>( in float4 localPos )
     {
         float3 worldPos = mul(unity_ObjectToWorld, localPos).xyz;
         return UnityWorldSpaceLightDir(worldPos);
     }
     
     // Computes object space light direction
-    inline float3 ObjSpaceLightDir( in float4 v )
+    inline float3 <a name="ObjSpaceLightDir">ObjSpaceLightDir</a>( in float4 v )
     {
         float3 objSpaceLightPos = mul(unity_WorldToObject, _WorldSpaceLightPos0).xyz;
         #ifndef USING_LIGHT_MULTI_COMPILE
@@ -225,35 +224,35 @@
     }
     
     // Computes world space view direction, from object space position
-    inline float3 UnityWorldSpaceViewDir( in float3 worldPos )
+    inline float3 <a name="UnityWorldSpaceViewDir">UnityWorldSpaceViewDir( in float3 worldPos )
     {
         return _WorldSpaceCameraPos.xyz - worldPos;
     }
     
     // Computes world space view direction, from object space position
     // *Legacy* Please use UnityWorldSpaceViewDir instead
-    inline float3 WorldSpaceViewDir( in float4 localPos )
+    inline float3 <a name="WorldSpaceViewDir">WorldSpaceViewDir</a>( in float4 localPos )
     {
         float3 worldPos = mul(unity_ObjectToWorld, localPos).xyz;
         return UnityWorldSpaceViewDir(worldPos);
     }
     
     // Computes object space view direction
-    inline float3 ObjSpaceViewDir( in float4 v )
+    inline float3 <a name="ObjSpaceViewDir">ObjSpaceViewDir</a>( in float4 v )
     {
         float3 objSpaceCameraPos = mul(unity_WorldToObject, float4(_WorldSpaceCameraPos.xyz, 1)).xyz;
         return objSpaceCameraPos - v.xyz;
     }
     
     // Declares 3x3 matrix 'rotation', filled with tangent space basis
-    #define TANGENT_SPACE_ROTATION \
+    #define <a name="TANGENT_SPACE_ROTATION">TANGENT_SPACE_ROTATION</a> \
         float3 binormal = cross( normalize(v.normal), normalize(v.tangent.xyz) ) * v.tangent.w; \
         float3x3 rotation = float3x3( v.tangent.xyz, binormal, v.normal )
     
     
     
     // Used in ForwardBase pass: Calculates diffuse lighting from 4 point lights, with data packed in a special way.
-    float3 Shade4PointLights (
+    float3 <a name="Shade4PointLights">Shade4PointLights</a> (
         float4 lightPosX, float4 lightPosY, float4 lightPosZ,
         float3 lightColor0, float3 lightColor1, float3 lightColor2, float3 lightColor3,
         float4 lightAttenSq,
@@ -293,7 +292,7 @@
     
     // Used in Vertex pass: Calculates diffuse lighting from lightCount lights. Specifying true to spotLight is more expensive
     // to calculate but lights are treated as spot lights otherwise they are treated as point lights.
-    float3 ShadeVertexLightsFull (float4 vertex, float3 normal, int lightCount, bool spotLight)
+    float3 <a name="ShadeVertexLightsFull">ShadeVertexLightsFull</a> (float4 vertex, float3 normal, int lightCount, bool spotLight)
     {
         float3 viewpos = UnityObjectToViewPos (vertex.xyz);
         float3 viewN = normalize (mul ((float3x3)UNITY_MATRIX_IT_MV, normal));
@@ -322,13 +321,13 @@
         return lightColor;
     }
     
-    float3 ShadeVertexLights (float4 vertex, float3 normal)
+    float3 <a name="ShadeVertexLights">ShadeVertexLights</a> (float4 vertex, float3 normal)
     {
         return ShadeVertexLightsFull (vertex, normal, 4, false);
     }
     
     // normal should be normalized, w=1.0
-    half3 SHEvalLinearL0L1 (half4 normal)
+    half3 <a name="SHEvalLinearL0L1">SHEvalLinearL0L1</a> (half4 normal)
     {
         half3 x;
     
@@ -341,7 +340,7 @@
     }
     
     // normal should be normalized, w=1.0
-    half3 SHEvalLinearL2 (half4 normal)
+    half3 <a name="SHEvalLinearL2">SHEvalLinearL2</a> (half4 normal)
     {
         half3 x1, x2;
         // 4 of the quadratic (L2) polynomials
@@ -359,7 +358,7 @@
     
     // normal should be normalized, w=1.0
     // output in active color space
-    half3 ShadeSH9 (half4 normal)
+    half3 <a name="ShadeSH9">ShadeSH9</a> (half4 normal)
     {
         // Linear + constant polynomial terms
         half3 res = SHEvalLinearL0L1 (normal);
@@ -375,7 +374,7 @@
     }
     
     // OBSOLETE: for backwards compatibility with 5.0
-    half3 ShadeSH3Order(half4 normal)
+    half3 <a name="ShadeSH3Order">ShadeSH3Order</a>(half4 normal)
     {
         // Quadratic polynomials
         half3 res = SHEvalLinearL2 (normal);
@@ -390,7 +389,7 @@
     #if UNITY_LIGHT_PROBE_PROXY_VOLUME
     
     // normal should be normalized, w=1.0
-    half3 SHEvalLinearL0L1_SampleProbeVolume (half4 normal, float3 worldPos)
+    half3 <a name="SHEvalLinearL0L1_SampleProbeVolume">SHEvalLinearL0L1_SampleProbeVolume</a> (half4 normal, float3 worldPos)
     {
         const float transformToLocal = unity_ProbeVolumeParams.y;
         const float texelSizeX = unity_ProbeVolumeParams.z;
@@ -429,7 +428,7 @@
     #endif
     
     // normal should be normalized, w=1.0
-    half3 ShadeSH12Order (half4 normal)
+    half3 <a name="ShadeSH12Order">ShadeSH12Order</a> (half4 normal)
     {
         // Linear + constant polynomial terms
         half3 res = SHEvalLinearL0L1 (normal);
@@ -442,20 +441,20 @@
     }
     
     // Transforms 2D UV by scale/bias property
-    #define TRANSFORM_TEX(tex,name) (tex.xy * name##_ST.xy + name##_ST.zw)
+    #define <a name="TRANSFORM_TEX">TRANSFORM_TEX</a>(tex,name) (tex.xy * name##_ST.xy + name##_ST.zw)
     
     // Deprecated. Used to transform 4D UV by a fixed function texture matrix. Now just returns the passed UV.
-    #define TRANSFORM_UV(idx) v.texcoord.xy
+    #define <a name="TRANSFORM_UV">TRANSFORM_UV</a>(idx) v.texcoord.xy
     
     
     
-    struct v2f_vertex_lit {
+    struct <a name="v2f_vertex_lit">v2f_vertex_lit</a> {
         float2 uv   : TEXCOORD0;
         fixed4 diff : COLOR0;
         fixed4 spec : COLOR1;
     };
     
-    inline fixed4 VertexLight( v2f_vertex_lit i, sampler2D mainTex )
+    inline fixed4 <a name="VertexLight">VertexLight</a>( v2f_vertex_lit i, sampler2D mainTex )
     {
         fixed4 texcol = tex2D( mainTex, i.uv );
         fixed4 c;
@@ -466,7 +465,7 @@
     
     
     // Calculates UV offset for parallax bump mapping
-    inline float2 ParallaxOffset( half h, half height, half3 viewDir )
+    inline float2 <a name="ParallaxOffset">ParallaxOffset</a>( half h, half height, half3 viewDir )
     {
         h = h * height - height/2.0;
         float3 v = normalize(viewDir);
@@ -475,19 +474,19 @@
     }
     
     // Converts color to luminance (grayscale)
-    inline half Luminance(half3 rgb)
+    inline half <a name="Luminance">Luminance</a>(half3 rgb)
     {
         return dot(rgb, unity_ColorSpaceLuminance.rgb);
     }
     
     // Convert rgb to luminance
     // with rgb in linear space with sRGB primaries and D65 white point
-    half LinearRgbToLuminance(half3 linearRgb)
+    half <a name="LinearRgbToLuminance">LinearRgbToLuminance</a>(half3 linearRgb)
     {
         return dot(linearRgb, half3(0.2126729f,  0.7151522f, 0.0721750f));
     }
     
-    half4 UnityEncodeRGBM (half3 color, float maxRGBM)
+    half4 <a name="UnityEncodeRGBM">UnityEncodeRGBM</a> (half3 color, float maxRGBM)
     {
         float kOneOverRGBMMaxRange = 1.0 / maxRGBM;
         const float kMinMultiplier = 2.0 * 1e-2;
@@ -504,7 +503,7 @@
     
     // Decodes HDR textures
     // handles dLDR, RGBM formats
-    inline half3 DecodeHDR (half4 data, half4 decodeInstructions)
+    inline half3 <a name="DecodeHDR">DecodeHDR</a> (half4 data, half4 decodeInstructions)
     {
         // Take into account texture alpha if decodeInstructions.w is true(the alpha value affects the RGB channels)
         half alpha = decodeInstructions.w * (data.a - 1.0) + 1.0;
@@ -1215,5 +1214,6 @@
     
 </pre>
 <script src="https://xibanya.github.io/ShaderTutorials/CGIncludes/code-prettify/loader/run_prettify.js?skin=vscode"></script>
+<script src="https://xibanya.github.io/ShaderTutorials/CGIncludes/Data/link_definitions.js"></script>
 </body>
 </html>
