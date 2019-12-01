@@ -262,5 +262,143 @@
         "ID": 44,
         "Include": "UnityImageBasedLighting",
         "Official Comments": null
+    },
+    {
+        "Field": "UnityStandardBRDF.cginc",
+        "ID": 45,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "PerceptualRoughnessToRoughness",
+        "ID": 46,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "RoughnessToPerceptualRoughness",
+        "ID": 47,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "SmoothnessToRoughness",
+        "ID": 48,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "SmoothnessToPerceptualRoughness",
+        "ID": 49,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "Pow4",
+        "ID": 50,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "Pow5",
+        "ID": 51,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "FresnelTerm",
+        "ID": 52,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "FresnelLerp",
+        "ID": 53,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "FresnelLerpFast",
+        "ID": 54,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "DisneyDiffuse",
+        "ID": 55,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "SmithVisibilityTerm",
+        "ID": 56,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "SmithBeckmannVisibilityTerm",
+        "ID": 57,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "SmithJointGGXVisibilityTerm",
+        "ID": 58,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "GGXTerm",
+        "ID": 59,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "PerceptualRoughnessToSpecPower",
+        "ID": 60,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "NDFBlinnPhongNormalizedTerm",
+        "ID": 61,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "Unity_SafeNormalize",
+        "ID": 62,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "BRDF1_Unity_PBS",
+        "ID": 63,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "BRDF2_Unity_PBS",
+        "ID": 64,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "BRDF3_Direct",
+        "ID": 65,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "BRDF3_Indirect",
+        "ID": 66,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
+    },
+    {
+        "Field": "BRDF3_Unity_PBS",
+        "ID": 67,
+        "Include": "UnityStandardBRDF",
+        "Official Comments": null
     }
 ]
