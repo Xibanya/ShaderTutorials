@@ -34,7 +34,7 @@ Shader "Xibanya/Skybox/SimpleCubemap"
 		Tags
 		{ 
 			"RenderType" = "Background"
-			"Queue" = "Background+0"
+			"Queue" = "Background"
 			"IgnoreProjector" = "True"
 			"PreviewType" = "Skybox"
 		}
