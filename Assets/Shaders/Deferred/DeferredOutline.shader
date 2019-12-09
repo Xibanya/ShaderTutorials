@@ -1,3 +1,6 @@
+//This file only contains the outline passes
+//see https://github.com/Xibanya/ShaderTutorials/blob/master/Assets/Shaders/Deferred/LitDeferred.shader 
+//for the non-outline deferred frag shader
 Shader "Xibanya/Deferred/LitDeferredOutline"
 {
 	Properties
