@@ -10,47 +10,45 @@ Shader "Xibanya/SimpleToonThreshold"
 		_ShadowSoftness("Shadow Smoothness", Range(0.5, 1)) = 0.6
 		_ShadowColor("Shadow Color", Color) = (0,0,0,1)
 	}
-		SubShader
+	SubShader
+	{
+		Tags { "RenderType" = "Opaque" }
+		LOD 200
+
+		CGPROGRAM
+		#pragma surface surf Toon
+		
+		half		_Threshold;
+		half		_ShadowSoftness;
+		half3		_ShadowColor;
+		sampler2D	_MainTex;
+		sampler2D	_BumpMap;
+		
+		struct Input
 		{
-			Tags { "RenderType" = "Opaque" }
-			LOD 200
+			float2 uv_MainTex;
+		};
+		half4		_Color;
+		float		_BumpScale;
 
-			CGPROGRAM
-			#pragma surface surf Toon
+            	inline half4 LightingToon(SurfaceOutput s, half3 lightDir, half atten)
+            	{
+            	#ifndef USING_DIRECTIONAL_LIGHT
+            	    	lightDir = normalize(lightDir);
+            	#endif
+			half shadowDot = pow(dot(s.Normal, lightDir) * 0.5 + 0.5, _Threshold);
+			float threshold = smoothstep(0.5, _ShadowSoftness, shadowDot);
+            	    	half3 diffuseTerm = threshold * atten;
+            	    	half3 diffuse = lerp(_ShadowColor, _LightColor0.rgb, diffuseTerm);
+            	    	return half4(s.Albedo * diffuse, 1);
+            	}
 
-			half		_Threshold;
-			half		_ShadowSoftness;
-			half3		_ShadowColor;
-
-			sampler2D	_MainTex;
-			sampler2D	_BumpMap;
-
-			struct Input
-			{
-				float2 uv_MainTex;
-			};
-
-			half4		_Color;
-			float		_BumpScale;
-
-            inline half4 LightingToon(SurfaceOutput s, half3 lightDir, half atten)
-            {
-            #ifndef USING_DIRECTIONAL_LIGHT
-                lightDir = normalize(lightDir);
-            #endif
-				half d = dot(s.Normal, lightDir) * 0.5 + 0.5;
-                float thresh = smoothstep(_Threshold - _ShadowSoftness * 0.3, _Threshold + _ShadowSoftness * 0.3, d);
-                half3 diffuseTerm = smoothstep(0, _ShadowSoftness, thresh) * atten;
-                half3 diffuse = lerp(_ShadowColor, _LightColor0.rgb, diffuseTerm);
-                return half4(s.Albedo * diffuse, 1);
-            }
-
-			void surf(Input IN, inout SurfaceOutput o)
-			{
-				o.Albedo = tex2D(_MainTex, IN.uv_MainTex).rgb * _Color;
-				o.Normal = UnpackScaleNormal(tex2D(_BumpMap, IN.uv_MainTex), _BumpScale);
-			}
-			ENDCG
+		void surf(Input IN, inout SurfaceOutput o)
+		{
+			o.Albedo = tex2D(_MainTex, IN.uv_MainTex).rgb * _Color;
+			o.Normal = UnpackScaleNormal(tex2D(_BumpMap, IN.uv_MainTex), _BumpScale);
 		}
-		FallBack "Diffuse"
+		ENDCG
+	}
+	FallBack "Diffuse"
 }
