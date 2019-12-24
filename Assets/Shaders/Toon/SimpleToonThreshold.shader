@@ -38,7 +38,7 @@ Shader "Xibanya/SimpleToonThreshold"
             	#endif
 			half shadowDot = pow(dot(s.Normal, lightDir) * 0.5 + 0.5, _Threshold);
 			float threshold = smoothstep(0.5, _ShadowSoftness, shadowDot);
-            	    	half3 diffuseTerm = threshold * atten;
+            	    	half3 diffuseTerm = saturate(threshold * atten);
             	    	half3 diffuse = lerp(_ShadowColor, _LightColor0.rgb, diffuseTerm);
             	    	return half4(s.Albedo * diffuse, 1);
             	}
