@@ -1,5 +1,5 @@
 # ShaderTutorials
-Collection of shaders used in tutorial series Shaders For People Who Don't Know How To Shader
+This repo contains the source of the shaders used in the tutorial series Shaders For People Who Don't Know How To Shader
 
 ## Tutorial Directory
 * [Part 0: Setup](https://www.patreon.com/posts/27925846)
