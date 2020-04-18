@@ -32,3 +32,6 @@ This repo contains the source of the shaders used in the tutorial series Shaders
 * [Part 24: Height Maps & Parallaxing](https://www.patreon.com/posts/32642532)
 * [Part 25: Command Buffers](https://www.patreon.com/posts/33355189)
 * [Part 26: Deferred](https://www.patreon.com/posts/shaders-for-who-34008552)
+* [Part 27: Bitmasks](https://www.patreon.com/posts/tutorial-for-who-34282461)
+* [Part 28: Blending with Sine](https://www.patreon.com/posts/shaders-for-who-35129311)
+* [Part 29: Color Masked UI Graphics](https://www.patreon.com/posts/3-techniques-for-36122576)
