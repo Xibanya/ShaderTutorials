@@ -36,3 +36,4 @@ This repo contains the source of the shaders used in the tutorial series Shaders
 * [Part 28: Blending with Sine](https://www.patreon.com/posts/shaders-for-who-35129311)
 * [Part 29: Color Masked UI Graphics](https://www.patreon.com/posts/3-techniques-for-36122576)
 * [Part 30: Depth-based Effects](https://www.patreon.com/posts/depth-based-post-36438990)
+* [Part 31: Texture Generation](https://www.patreon.com/posts/texture-37273570)
