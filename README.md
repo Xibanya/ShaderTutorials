@@ -1,5 +1,5 @@
 # ShaderTutorials
-Shaders For People Who Don't Know How To Shader is an ongoing tutorial series aimed at novices that presupposes no prior knowledge of Unity, programming, or shaders. This repo contains the source of the shaders used in the tutorial series Shaders For People Who Don't Know How To Shader
+Shaders For People Who Don't Know How To Shader is an ongoing tutorial series aimed at novices that presupposes no prior knowledge of Unity, programming, or shaders. This repo contains the source of the shaders used in the series.
 
 ## Tutorial Directory
 * [Part 0: Setup](https://www.patreon.com/posts/27925846)
