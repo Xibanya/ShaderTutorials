@@ -38,3 +38,4 @@ Shaders For People Who Don't Know How To Shader is an ongoing tutorial series ai
 * [Part 30: Depth-based Effects](https://www.patreon.com/posts/depth-based-post-36438990)
 * [Part 31: Texture Generation](https://www.patreon.com/posts/texture-37273570)
 * [Part 32: Normal Map Generation](https://www.patreon.com/posts/texture-part-2-37604751)
+* [Part 33: Scanline Post Effect](https://www.patreon.com/posts/38451970)
