@@ -39,3 +39,4 @@ Shaders For People Who Don't Know How To Shader is an ongoing tutorial series ai
 * [Part 31: Texture Generation](https://www.patreon.com/posts/texture-37273570)
 * [Part 32: Normal Map Generation](https://www.patreon.com/posts/texture-part-2-37604751)
 * [Part 33: Scanline Post Effect](https://www.patreon.com/posts/38451970)
+* [Part 34: Basic Audio Visualization](https://www.patreon.com/posts/shader-tutorial-38679948)
