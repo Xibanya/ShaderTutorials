@@ -108,20 +108,12 @@ Shader "Xibanya/HDRP/XibProcEye"
 
 			PositionInputs posInput = GetPositionInput(input.positionSS.xy, _ScreenSize.zw, 
 				input.positionSS.z, input.positionSS.w, input.positionRWS);
-
-			float2 uv = input.texCoord0.xy;
-			float2 outlineUV = float2(uv.x, uv.y);
-			float outline = circle(outlineUV, _Radius + _OutlineThickness * _Radius);
-			half3 albedo = lerp(_Color, _OutlineColor, outline);
-			float iris = circle(uv, _Radius);
-			half3 color = lerp(albedo, _IrisColor, iris);
 			float3 V = GetWorldSpaceNormalizeViewDir(input.positionRWS);
 			SurfaceData surfaceData;
 			surfaceData.materialFeatures = _MaterialID;
 			BuiltinData builtinData;
 			GetSurfaceAndBuiltinData(input, V, posInput, surfaceData, builtinData);
-			surfaceData.ambientOcclusion = 1 - (outline - iris);
-			surfaceData.baseColor = color;
+			surfaceData.baseColor = EyeColor(input.texCoord0.xy);
 			ENCODE_INTO_GBUFFER(surfaceData, builtinData, posInput.positionSS, outGBuffer);
 
 #ifdef _DEPTHOFFSET_ON
