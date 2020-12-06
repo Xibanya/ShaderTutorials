@@ -41,3 +41,4 @@ Shaders For People Who Don't Know How To Shader is an ongoing tutorial series ai
 * [Part 33: Scanline Post Effect](https://www.patreon.com/posts/38451970)
 * [Part 34: Basic Audio Visualization](https://www.patreon.com/posts/shader-tutorial-38679948)
 * [Part 35: Screen Position](https://www.patreon.com/posts/40767193)
+* [Special Episode: Lighting Black Skin](https://www.patreon.com/posts/black-skin-in-44718776)
