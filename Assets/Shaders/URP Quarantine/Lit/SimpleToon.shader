@@ -1,4 +1,4 @@
-﻿Shader "Xibanya/URP/SimpleToon"
+Shader "Xibanya/URP/SimpleToon"
 {
     Properties
     {
@@ -8,8 +8,8 @@
         _BumpScale("Scale", Float) = 1.0
         _BumpMap("Normal Map", 2D) = "bump" {}
         _Threshold("Shadow Threshold", Range(0,2)) = 1
-		_ShadowSoftness("Shadow Smoothness", Range(0.5, 1)) = 0.6
-		_ShadowColor("Shadow Color", Color) = (0,0,0,1)
+	_ShadowSoftness("Shadow Smoothness", Range(0.5, 1)) = 0.6
+	_ShadowColor("Shadow Color", Color) = (0,0,0,1)
         [Toggle(_RECEIVE_SHADOWS_OFF)] _NoReceiveShadows("Don't receive shadows?", float) = 0
     }
     SubShader
@@ -17,6 +17,7 @@
         Tags 
         { 
             "RenderType" = "Opaque" 
+            ///Have to have this tag for it to work in URP
             "RenderPipeline" = "UniversalPipeline" 
             "IgnoreProjector" = "True"
         }
@@ -24,16 +25,32 @@
         Pass
         {
             Name "ForwardLit"
+            ///Has to have this tag or lighting won't work right
+            ///Just like writing frag shaders that use ForwardBase
+            /// in the good (Standard) render pipeline
             Tags{ "LightMode" = "UniversalForward" }
+
+            ///Here you can put culling modes, ZWrite, 
+            ///Blend, ZTest, etc just like normal, they just
+            ///aren't here due to being irrelevant to this shader
             Cull Back
 
             HLSLPROGRAM
+            ///You have to have these two pragmas for shit to work
+            ///right due to stupid reasons, just leave 'em
             #pragma prefer_hlslcc gles
             #pragma exclude_renderers d3d11_9x
+
             #pragma target 2.0
 
-            #pragma shader_feature _NORMALMAP
-            #pragma shader_feature _RECEIVE_SHADOWS_OFF
+            ///Note: you can add your own keywords like usual, 
+            ///but every single keyword included here affects something
+            ///in the lighting done in the builtin includes. I got
+            ///rid of all the ones that are mostly pointless, don't get rid
+            ///of these unless you know why you're getting rid
+            ///of them
+            #pragma shader_feature_local _NORMALMAP
+            #pragma shader_feature_local _RECEIVE_SHADOWS_OFF
             #pragma multi_compile _ _MAIN_LIGHT_SHADOWS
             #pragma multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE
             #pragma multi_compile _ _ADDITIONAL_LIGHTS_VERTEX _ADDITIONAL_LIGHTS
@@ -64,6 +81,7 @@
 
             half3 LightingToon(Light light, float3 normal)
             {
+                ///PUT WHATEVER CUSTOM LIGHTING YOU WANT HERE
                 half shadowDot = pow(dot(normal, light.direction) * 0.5 + 0.5, _Threshold);
                 float threshold = smoothstep(0.5, _ShadowSoftness, shadowDot);
             	half3 diffuseTerm = saturate(
@@ -77,6 +95,8 @@
                 UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(input);
 
                 half4 col = tex2D(_BaseMap, i.uv.xy) * _BaseColor;
+
+                //Get world normal
             #ifdef _NORMALMAP
                 half3 normal = UnpackScaleNormal(tex2D(_BumpMap, i.uv.zw), _BumpScale);
                 float3 worldNormal = TransformTangentToWorld(normal,
@@ -85,25 +105,34 @@
                 float3 worldNormal = i.normalWS;
             #endif
                 worldNormal = NormalizeNormalPerPixel(worldNormal);
+                ////////////////////////////////////
+
+                // Apply lighting
                 #ifdef _MAIN_LIGHT_SHADOWS
                 float4 shadowCoord = i.shadowCoord;
                 #else
                 float4 shadowCoord = float4(0, 0, 0, 0);
                 #endif
                 Light mainLight = GetMainLight(shadowCoord);
-                half3 diffuseColor = LightingToon(mainLight, worldNormal);
+                half3 diffuse = LightingToon(mainLight, worldNormal);
 
                 #ifdef _ADDITIONAL_LIGHTS
                 uint pixelLightCount = GetAdditionalLightsCount();
                 for (uint lightIndex = 0u; lightIndex < pixelLightCount; ++lightIndex)
                 {
                     Light light = GetAdditionalLight(lightIndex, i.positionWS);
-                    diffuseColor += LightingToon(light, worldNormal);
+                    diffuse += LightingToon(light, worldNormal);
                 }
                 #endif
+                ////////////////////////////////////
+                half3 finalDiffuse = col.rgb * diffuse;
 
-                half3 finalColor = diffuseColor * col.rgb;
-                return half4(finalColor, 1);
+                ///////////////////////////////////////////////////////
+                // BASICALLY IF YOU WANT TO PRETEND URP HAS A SURFACE SHADER
+                // USE THIS AND PUT ALL YOUR CUSTOM CRAP HERE
+                ////////////////////////////////////////////////////////
+
+                return half4(finalDiffuse, 1);
             }
             ENDHLSL
         }
