@@ -10,6 +10,7 @@
         _Threshold("Shadow Threshold", Range(0,2)) = 1
 		_ShadowSoftness("Shadow Smoothness", Range(0.5, 1)) = 0.6
 		_ShadowColor("Shadow Color", Color) = (0,0,0,1)
+        [Toggle(_RECEIVE_SHADOWS_OFF)] _NoReceiveShadows("Don't receive shadows?", float) = 0
     }
     SubShader
     {
