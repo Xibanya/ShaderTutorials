@@ -8,28 +8,28 @@ Shader "Xibanya/URP/Lit/XibLitDissolve"
         _BumpScale("Scale", Float) = 1.0
         [Normal]_BumpMap("Normal Map", 2D) = "bump" {}
         _Threshold("Shadow Threshold", Range(0,2)) = 1
-		_ShadowSoftness("Shadow Smoothness", Range(0.5, 1)) = 0.6
-		_ShadowColor("Shadow Color", Color) = (0.1657655, 0.1768016, 0.5367647,1)
+	_ShadowSoftness("Shadow Smoothness", Range(0.5, 1)) = 0.6
+	_ShadowColor("Shadow Color", Color) = (0.1657655, 0.1768016, 0.5367647,1)
         [Header(Dissolve)]
         [KeywordEnum(Screen, Pos, UV)] _Coords("Dissolve coords", float) = 0
-		[NoScaleOffset]_Noise("Dissolve Mask", 2D) = "white" {}
+	[NoScaleOffset]_Noise("Dissolve Mask", 2D) = "white" {}
         _DissolveScale("Dissolve Scale", float) = 1
         [NoScaleOffset]_Edge("Edge Mask", 2D) = "white" {}
         _EdgeScale("Noise Scale", float) = 1
-		_DissolveAmount("Dissolve Amount", Range(0, 1)) = 0.1
-		_DissolveLine("Dissolve Line", Range(0, 0.2)) = 0.1
-		[HDR]_DissolveLineColor("Dissolve Line Color", Color) = (1,1,1,1)
-		_DissolveLineSmooth("Dissolve Line Smooth", Range(0, 1)) = 0
+	_DissolveAmount("Dissolve Amount", Range(0, 1)) = 0.1
+	_DissolveLine("Dissolve Line", Range(0, 0.2)) = 0.1
+	[HDR]_DissolveLineColor("Dissolve Line Color", Color) = (1,1,1,1)
+	_DissolveLineSmooth("Dissolve Line Smooth", Range(0, 1)) = 0
         _LineCutoff("Line cutoff", Range(0,1)) = 0.5
         _Scroll("Scroll: XY Noise, ZW Edge", Vector) = (0, 0, 0, 0)
         _RimPower("Rim Power", Range(0, 2)) = 1
         [Space]
         [Header(Options)]
-		[Toggle] _ALPHATEST("Cutout?", float) = 0
-		_Cutoff("Alpha cutoff", Range(0,1)) = 0.5
-		[Enum(Off,0,Front,1,Back,2)] _Cull("Cull", Int) = 2
+	[Toggle] _ALPHATEST("Cutout?", float) = 0
+	_Cutoff("Alpha cutoff", Range(0,1)) = 0.5
+	[Enum(Off,0,Front,1,Back,2)] _Cull("Cull", Int) = 2
         [Enum(UnityEngine.Rendering.BlendMode)] _Src("Source Blend", float) = 5
-		[Enum(UnityEngine.Rendering.BlendMode)] _Dst("Destination Blend", float) = 10
+	[Enum(UnityEngine.Rendering.BlendMode)] _Dst("Destination Blend", float) = 10
         [Toggle(_RECEIVE_SHADOWS_OFF)] _NoReceiveShadows("Don't receive shadows?", float) = 0
     }
     SubShader
