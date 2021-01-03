@@ -150,9 +150,7 @@ Shader "Xibanya/URP/Lit/XibLitDissolve"
             OUTPUT_LIGHTMAP_UV(v.lightmapUV, unity_LightmapST, o.lightmapUV);
             OUTPUT_SH(o.normalWS.xyz, o.vertexSH);
 
-        //#ifdef _ADDITIONAL_LIGHTS
             o.positionWS = vertexInput.positionWS;
-        //#endif
 
         #if defined(_MAIN_LIGHT_SHADOWS) && !defined(_RECEIVE_SHADOWS_OFF)
             o.shadowCoord = GetShadowCoord(vertexInput);
