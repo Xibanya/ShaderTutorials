@@ -91,8 +91,8 @@ Shader "Xibanya/URP/SimpleToon"
 
             half4 frag(v2f i) : SV_TARGET
             {
-                UNITY_SETUP_INSTANCE_ID(input);
-                UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(input);
+                UNITY_SETUP_INSTANCE_ID(i);
+                UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
 
                 half4 col = tex2D(_BaseMap, i.uv.xy) * _BaseColor;
 
