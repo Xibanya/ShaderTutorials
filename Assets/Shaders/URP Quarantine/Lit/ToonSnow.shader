@@ -8,8 +8,8 @@
         _BumpScale("Scale", Float) = 1.0
         [Normal]_BumpMap("Normal Map", 2D) = "bump" {}
         _Threshold("Shadow Threshold", Range(0,2)) = 1
-		_ShadowSoftness("Shadow Smoothness", Range(0.5, 1)) = 0.6
-		_ShadowColor("Shadow Color", Color) = (0.1657655, 0.1768016, 0.5367647,1)
+	_ShadowSoftness("Shadow Smoothness", Range(0.5, 1)) = 0.6
+	_ShadowColor("Shadow Color", Color) = (0.1657655, 0.1768016, 0.5367647,1)
         _SnowColor("Snow Color", Color) = (1,1,1,1)
         _SnowDirection("Snow Direction", Vector) = (0, 1, 0, 0)
         _SnowShape("Snow Buildup", Range(0, 0.1)) = 1
@@ -139,8 +139,8 @@
 
             half4 frag(v2f i) : SV_TARGET
             {
-                UNITY_SETUP_INSTANCE_ID(input);
-                UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(input);
+                UNITY_SETUP_INSTANCE_ID(i);
+                UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
                 half4 col = tex2D(_BaseMap, i.uv.xy) * _BaseColor;
                 GET_WORLD_NORMAL;
 
