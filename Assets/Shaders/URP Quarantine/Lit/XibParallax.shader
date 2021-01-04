@@ -7,8 +7,8 @@ Shader "Xibanya/URP/XibParallax"
         _BumpScale("Scale", Float) = 1.0
         [Normal]_BumpMap("Normal Map", 2D) = "bump" {}
         _Threshold("Shadow Threshold", Range(0,2)) = 1
-		_ShadowSoftness("Shadow Smoothness", Range(0.5, 1)) = 0.6
-		_ShadowColor("Shadow Color", Color) = (0.1657655, 0.1768016, 0.5367647,1)
+	_ShadowSoftness("Shadow Smoothness", Range(0.5, 1)) = 0.6
+	_ShadowColor("Shadow Color", Color) = (0.1657655, 0.1768016, 0.5367647,1)
         [Header(Shiny)]
         _Smoothness("Smoothness", Range(0.0, 1.0)) = 0.5
         [Gamma] _Metallic("Metallic", Range(0.0, 1.0)) = 0.0
@@ -21,16 +21,15 @@ Shader "Xibanya/URP/XibParallax"
         _EmissionMap("EmissionMap", 2D) = "white" {}
         [HDR]_EmissionColor("Emission Color", Color) = (0, 0, 0, 1)
         [Header(Parallax)]
-		_ParallaxMap("Parallax map", 2D) = "black" {}
+	_ParallaxMap("Parallax map", 2D) = "black" {}
         [IntRange]_Steps("Steps", Range(4, 32)) = 5
-		_Parallax("Parallax Strength", Range(-0.5, 0.5)) = 0.1
+	_Parallax("Parallax Strength", Range(-0.5, 0.5)) = 0.1
         _Amplitude("Prallax Amplitude", Range(-1, 1)) = 0.2
-		[HDR]_ParallaxColor("Parallax Color", Color) = (1,1,1,1)
+	[HDR]_ParallaxColor("Parallax Color", Color) = (1,1,1,1)
         [Header(Options)]
-        
-		[Toggle] _ALPHATEST("Cutout?", float) = 0
-		_Cutoff("Alpha cutoff", Range(0,1)) = 0.5
-		[Enum(Off,0,Front,1,Back,2)] _Cull("Cull", Int) = 2
+	[Toggle] _ALPHATEST("Cutout?", float) = 0
+	_Cutoff("Alpha cutoff", Range(0,1)) = 0.5
+	[Enum(Off,0,Front,1,Back,2)] _Cull("Cull", Int) = 2
         [Toggle(_RECEIVE_SHADOWS_OFF)] _NoReceiveShadows("Don't receive shadows?", float) = 0
     }
     SubShader
@@ -55,7 +54,6 @@ Shader "Xibanya/URP/XibParallax"
             #pragma exclude_renderers d3d11_9x
             #pragma target 4.5
             #pragma shader_feature_local _ALPHATEST_ON
-		    #pragma shader_feature_local _SELFOCCLUSION_ON
             #pragma shader_feature_local _RECEIVE_SHADOWS_OFF
             #pragma shader_feature_local _SHINY_METALLIC _SHINY_ROUGHNESS _SHINY_SPEC
             #pragma multi_compile _ _MAIN_LIGHT_SHADOWS
@@ -223,14 +221,14 @@ Shader "Xibanya/URP/XibParallax"
             float GetParallax(float2 uv, float3 viewDir)
             {
                 float parallax = 0;
-                int iterations = max(1, min(_Steps, 64));
-                for (int i = 0; i < iterations; i++)
+                int steps = max(1, min(_Steps, 64));
+                for (int i = 0; i < steps; i++)
                 {
-                        float fade = 1 - (float)i / iterations;
+                        float fade = 1 - (float)i / steps;
                         parallax += tex2D(_ParallaxMap, uv + fade * _Parallax *
                             normalize(viewDir)).g * fade;
                 }
-                parallax /= iterations;
+                parallax /= steps;
                 return parallax;
             }
             
