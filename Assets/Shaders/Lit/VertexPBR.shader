@@ -2,20 +2,20 @@ Shader "Xibanya/Lit/VertexPBR"
 {
     Properties
     {
-        _Color					("Color", Color) = (1,1,1,1)
-        _MainTex				("Albedo (RGB)", 2D) = "white" {}
+        _Color				("Color", Color) = (1,1,1,1)
+        _MainTex			("Albedo (RGB)", 2D) = "white" {}
 	[NoScaleOffset]_BumpMap	("Normal Map", 2D) = "bump" {}
-	_BumpScale				("Normal Strength", float) = 1
+	_BumpScale			("Normal Strength", float) = 1
 	[Toggle(_METALLICGLOSSMAP)]
-	_IsMetallic				("Metallic Map?", float) = 0
+	_IsMetallic			("Metallic Map?", float) = 0
 	[NoScaleOffset]
 	_MetallicGlossMap		("Gloss Map", 2D) = "white" {}
-        _Glossiness				("Smoothness", Range(0,1)) = 0.5
+        _Glossiness			("Smoothness", Range(0,1)) = 0.5
         [Gamma]_Metallic		("Metallic", Range(0,1)) = 0.0
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType" = "Opaque" }
         LOD 200
 
         CGPROGRAM
