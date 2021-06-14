@@ -43,3 +43,4 @@ Shaders For People Who Don't Know How To Shader is an ongoing tutorial series ai
 * [Part 35: Screen Position](https://www.patreon.com/posts/40767193)
 * [Special Episode: Lighting Black Skin](https://www.patreon.com/posts/black-skin-in-44718776)
 * [Part 36: Lighting Models and Minnaert](https://www.patreon.com/posts/47518737)
+* [Color Spaces in Unity](https://www.patreon.com/posts/52289389)
