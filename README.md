@@ -45,3 +45,4 @@ Shaders For People Who Don't Know How To Shader is an ongoing tutorial series ai
 * [Part 36: Lighting Models and Minnaert](https://www.patreon.com/posts/47518737)
 * [Color Spaces in Unity](https://www.patreon.com/posts/52289389)
 * [Part 37: Deferred Frag Shaders](https://www.patreon.com/posts/deferred-frag-52476692)
+* [Part 38: Glowing without Bloom](https://www.patreon.com/posts/53965598)
