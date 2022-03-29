@@ -48,3 +48,4 @@ Shaders For People Who Don't Know How To Shader is an ongoing tutorial series ai
 * [Part 38: Glowing without Bloom](https://www.patreon.com/posts/53965598)
 * [Part 39: Self-Drawing Squiggles](https://www.patreon.com/posts/56602776)
 * [Unity GI](https://www.patreon.com/posts/mysteries-of-gi-56960666)
+* [Part 40: Intro to SDFs](https://www.patreon.com/posts/64440772)
