@@ -51,3 +51,4 @@ Shaders For People Who Don't Know How To Shader is an ongoing tutorial series ai
 * [Part 40: Intro to SDFs](https://www.patreon.com/posts/64440772)
 * [Part 41: Raymarching](https://www.patreon.com/posts/64940246)
 * [Part 42: Color Replacement](https://www.patreon.com/posts/68425011)
+* [Part 43: UVs](https://www.patreon.com/posts/69768922)
