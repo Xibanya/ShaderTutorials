@@ -1,14 +1,19 @@
-﻿Shader "Xibanya/Unlit/SpriteColorMask"
+﻿// Shaders For People Who Don't Know How To Shader Part 15: Sprites
+// https://www.patreon.com/posts/shaders-for-who-29239797
+// Code shared under Attribution 4.0 International (CC BY 4.0) license
+// https://creativecommons.org/licenses/by/4.0/
+Shader "Xibanya/Unlit/SpriteColorMask"
 {
     Properties
     {
-        [PerRendererData] _MainTex ("Sprite Texture", 2D) = "transparent" {}
-		[NoScaleOffset] _Mask("Color Mask", 2D) = "transparent" {}
-		_R("Red Channel Color", Color) = (1,1,1,1)
-		_G("Green Channel Color", Color) = (1,1,1,1)
-		_B("Blue Channel Color", Color) = (1,1,1,1)
-		_A("Alpha Color", Color) = (1,1,1,1)
-		[Enum(Off,0,Front,1,Back,2)] _Cull("Cull", float) = 2
+        [PerRendererData] _MainTex      ("Sprite Texture", 2D) = "transparent" {}
+		[NoScaleOffset] _Mask           ("Color Mask", 2D) = "transparent" {}
+		_R                              ("Red Channel Color", Color) = (1,1,1,1)
+		_G                              ("Green Channel Color", Color) = (1,1,1,1)
+		_B                              ("Blue Channel Color", Color) = (1,1,1,1)
+		_A                              ("Alpha Color", Color) = (1,1,1,1)
+		[Enum(Off,0,Front,1,Back,2)]
+        _Cull                           ("Cull", float) = 2
     }
     SubShader
     {
@@ -59,11 +64,11 @@
                 return o;
             }
 
-			sampler2D _Mask;
-			half4 _R;
-			half4 _G;
-			half4 _B;
-			half4 _A;
+			sampler2D   _Mask;
+			half4       _R;
+			half4       _G;
+			half4       _B;
+			half4       _A;
 
             half4 frag (v2f i) : SV_Target
             {

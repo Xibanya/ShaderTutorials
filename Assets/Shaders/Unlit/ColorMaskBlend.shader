@@ -1,5 +1,9 @@
-﻿//This shader is tutorialized in Part 29: Smooth Blending with Sine
+﻿//This shader is tutorialized in Shaders For People Who Don't Know How To 
+// Shader Part 29: Smooth Blending with Sine
 //https://www.patreon.com/posts/shaders-for-who-35129311
+// This code is by Xibanya and shared under an Attribution 4.0 International 
+// (CC BY 4.0) license
+// https://creativecommons.org/licenses/by/4.0/
 Shader "Xibanya/Unlit/ColorMaskBlend"
 {
     Properties
