@@ -54,3 +54,4 @@ Shaders For People Who Don't Know How To Shader is an ongoing tutorial series ai
 * [Part 43: UVs](https://www.patreon.com/posts/69768922)
 * [Part 44: 2D Rotation](https://www.patreon.com/posts/shader-tutorial-73605548)
 * [Part 45: Subsurface Scattering](https://www.patreon.com/posts/77970534)
+* [Part 46: Color Correction](https://www.patreon.com/posts/shader-tutorial-80733547)
