@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: [tutorial, Shaders For People Who Don't Know How To Shader]
-title: Shaders For People Who Don't KNow How To Shader
+title: Shaders For People Who Don't Know How To Shader
 permalink: /shaders/
 ---
 ## Tutorials
